@@ -28,18 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.CoinPictureBox = new System.Windows.Forms.PictureBox();
             this.NewOrderButton = new System.Windows.Forms.Button();
             this.SavedOrderButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CoinPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // CoinPictureBox
             // 
-            this.CoinPictureBox.Location = new System.Drawing.Point(55, 38);
+            this.CoinPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("CoinPictureBox.Image")));
+            this.CoinPictureBox.Location = new System.Drawing.Point(69, 48);
             this.CoinPictureBox.Name = "CoinPictureBox";
-            this.CoinPictureBox.Size = new System.Drawing.Size(294, 261);
+            this.CoinPictureBox.Size = new System.Drawing.Size(269, 261);
+            this.CoinPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CoinPictureBox.TabIndex = 0;
             this.CoinPictureBox.TabStop = false;
             // 
@@ -70,19 +74,31 @@
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
             // 
-            // OrderForm
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(53, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(292, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Order Your Computer Today!";
+            // 
+            // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 472);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SavedOrderButton);
             this.Controls.Add(this.NewOrderButton);
             this.Controls.Add(this.CoinPictureBox);
-            this.Name = "OrderForm";
+            this.Name = "StartForm";
             this.Text = "OrderForm";
             ((System.ComponentModel.ISupportInitialize)(this.CoinPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -92,5 +108,6 @@
         private System.Windows.Forms.Button NewOrderButton;
         private System.Windows.Forms.Button SavedOrderButton;
         private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Label label1;
     }
 }

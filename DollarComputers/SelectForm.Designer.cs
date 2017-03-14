@@ -28,22 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.HardwareListBox = new System.Windows.Forms.ListBox();
             this.SelectFormLabel = new System.Windows.Forms.Label();
             this.ChoiceLabel = new System.Windows.Forms.Label();
             this.ChoiceTextBox = new System.Windows.Forms.TextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
+            this.CompDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.CompDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // HardwareListBox
-            // 
-            this.HardwareListBox.FormattingEnabled = true;
-            this.HardwareListBox.ItemHeight = 16;
-            this.HardwareListBox.Location = new System.Drawing.Point(16, 48);
-            this.HardwareListBox.Name = "HardwareListBox";
-            this.HardwareListBox.Size = new System.Drawing.Size(890, 388);
-            this.HardwareListBox.TabIndex = 0;
             // 
             // SelectFormLabel
             // 
@@ -88,31 +80,42 @@
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
             // 
+            // CompDataGridView
+            // 
+            this.CompDataGridView.AllowUserToDeleteRows = false;
+            this.CompDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CompDataGridView.Location = new System.Drawing.Point(19, 34);
+            this.CompDataGridView.Name = "CompDataGridView";
+            this.CompDataGridView.ReadOnly = true;
+            this.CompDataGridView.RowTemplate.Height = 24;
+            this.CompDataGridView.Size = new System.Drawing.Size(875, 396);
+            this.CompDataGridView.TabIndex = 6;
+            // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 509);
+            this.Controls.Add(this.CompDataGridView);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.ChoiceTextBox);
             this.Controls.Add(this.ChoiceLabel);
             this.Controls.Add(this.SelectFormLabel);
-            this.Controls.Add(this.HardwareListBox);
             this.Name = "SelectForm";
             this.Text = "SelectForm";
+            ((System.ComponentModel.ISupportInitialize)(this.CompDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox HardwareListBox;
         private System.Windows.Forms.Label SelectFormLabel;
         private System.Windows.Forms.Label ChoiceLabel;
         private System.Windows.Forms.TextBox ChoiceTextBox;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.DataGridView CompDataGridView;
     }
 }
