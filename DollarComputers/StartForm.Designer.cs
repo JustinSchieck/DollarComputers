@@ -55,6 +55,7 @@
             this.NewOrderButton.TabIndex = 1;
             this.NewOrderButton.Text = "Start New Order";
             this.NewOrderButton.UseVisualStyleBackColor = true;
+            this.NewOrderButton.Click += new System.EventHandler(this.NewOrderButton_Click);
             // 
             // SavedOrderButton
             // 
@@ -64,6 +65,7 @@
             this.SavedOrderButton.TabIndex = 2;
             this.SavedOrderButton.Text = "Open Saved Order";
             this.SavedOrderButton.UseVisualStyleBackColor = true;
+            this.SavedOrderButton.Click += new System.EventHandler(this.SavedOrderButton_Click);
             // 
             // CancelButton
             // 
@@ -73,6 +75,7 @@
             this.CancelButton.TabIndex = 3;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // label1
             // 
@@ -89,12 +92,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 472);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SavedOrderButton);
             this.Controls.Add(this.NewOrderButton);
             this.Controls.Add(this.CoinPictureBox);
             this.Name = "StartForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
             ((System.ComponentModel.ISupportInitialize)(this.CoinPictureBox)).EndInit();
             this.ResumeLayout(false);

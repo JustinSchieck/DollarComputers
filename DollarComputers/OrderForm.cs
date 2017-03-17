@@ -16,5 +16,16 @@ namespace DollarComputers
         {
             InitializeComponent();
         }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FinishButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you!" + "\n" + "\n" +"Your Items will be shipped in 7 to 10 days" );
+            Application.Exit();
+        }
     }
 }

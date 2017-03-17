@@ -70,6 +70,7 @@
             this.CancelButton.TabIndex = 4;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // NextButton
             // 
@@ -79,6 +80,7 @@
             this.NextButton.TabIndex = 5;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // CompDataGridView
             // 
@@ -86,7 +88,6 @@
             this.CompDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CompDataGridView.Location = new System.Drawing.Point(19, 34);
             this.CompDataGridView.Name = "CompDataGridView";
-            this.CompDataGridView.ReadOnly = true;
             this.CompDataGridView.RowTemplate.Height = 24;
             this.CompDataGridView.Size = new System.Drawing.Size(875, 396);
             this.CompDataGridView.TabIndex = 6;
@@ -96,6 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 509);
+            this.ControlBox = false;
             this.Controls.Add(this.CompDataGridView);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
@@ -103,6 +105,7 @@
             this.Controls.Add(this.ChoiceLabel);
             this.Controls.Add(this.SelectFormLabel);
             this.Name = "SelectForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectForm";
             ((System.ComponentModel.ISupportInitialize)(this.CompDataGridView)).EndInit();
             this.ResumeLayout(false);
