@@ -6,12 +6,8 @@ namespace DollarComputers
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class DollarComputer
+    public partial class product
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Id { get; set; }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public short productID { get; set; }
 
         [Column(TypeName = "money")]

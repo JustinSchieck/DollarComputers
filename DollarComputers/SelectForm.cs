@@ -1,9 +1,7 @@
-﻿using DollarComputers.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +13,6 @@ namespace DollarComputers
     public partial class SelectForm : Form
     {
         public StartForm PreviousForm;
-        ProductsContext productDB = new ProductsContext();
 
         public SelectForm()
         {
@@ -38,22 +35,9 @@ namespace DollarComputers
 
         private void SelectForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dollarComputersDataSet2.products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter1.Fill(this.dollarComputersDataSet2.products);
-        }
+            // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
 
-        private void ChoiceTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CompDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            ChoiceTextBox.Text = CompDataGridView.SelectedRows[0].Cells[1].Value.ToString()
-            + " " + 
-            CompDataGridView.SelectedRows[0].Cells[2].Value.ToString()
-            + " " + 
-            CompDataGridView.SelectedRows[0].Cells[3].Value.ToString();
         }
     }
 }

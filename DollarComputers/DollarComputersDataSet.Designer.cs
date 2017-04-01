@@ -24,7 +24,7 @@ namespace DollarComputers {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DollarComputersDataSet : global::System.Data.DataSet {
         
-        private DollarComputersDataTable tableDollarComputers;
+        private productsDataTable tableproducts;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace DollarComputers {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DollarComputers"] != null)) {
-                    base.Tables.Add(new DollarComputersDataTable(ds.Tables["DollarComputers"]));
+                if ((ds.Tables["products"] != null)) {
+                    base.Tables.Add(new productsDataTable(ds.Tables["products"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DollarComputers {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DollarComputersDataTable DollarComputers {
+        public productsDataTable products {
             get {
-                return this.tableDollarComputers;
+                return this.tableproducts;
             }
         }
         
@@ -152,8 +152,8 @@ namespace DollarComputers {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DollarComputers"] != null)) {
-                    base.Tables.Add(new DollarComputersDataTable(ds.Tables["DollarComputers"]));
+                if ((ds.Tables["products"] != null)) {
+                    base.Tables.Add(new productsDataTable(ds.Tables["products"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DollarComputers {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDollarComputers = ((DollarComputersDataTable)(base.Tables["DollarComputers"]));
+            this.tableproducts = ((productsDataTable)(base.Tables["products"]));
             if ((initTable == true)) {
-                if ((this.tableDollarComputers != null)) {
-                    this.tableDollarComputers.InitVars();
+                if ((this.tableproducts != null)) {
+                    this.tableproducts.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace DollarComputers {
             this.Namespace = "http://tempuri.org/DollarComputersDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDollarComputers = new DollarComputersDataTable();
-            base.Tables.Add(this.tableDollarComputers);
+            this.tableproducts = new productsDataTable();
+            base.Tables.Add(this.tableproducts);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeDollarComputers() {
+        private bool ShouldSerializeproducts() {
             return false;
         }
         
@@ -270,16 +270,14 @@ namespace DollarComputers {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void DollarComputersRowChangeEventHandler(object sender, DollarComputersRowChangeEvent e);
+        public delegate void productsRowChangeEventHandler(object sender, productsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DollarComputersDataTable : global::System.Data.TypedTableBase<DollarComputersRow> {
-            
-            private global::System.Data.DataColumn columnId;
+        public partial class productsDataTable : global::System.Data.TypedTableBase<productsRow> {
             
             private global::System.Data.DataColumn columnproductID;
             
@@ -345,8 +343,8 @@ namespace DollarComputers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DollarComputersDataTable() {
-                this.TableName = "DollarComputers";
+            public productsDataTable() {
+                this.TableName = "products";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -354,7 +352,7 @@ namespace DollarComputers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DollarComputersDataTable(global::System.Data.DataTable table) {
+            internal productsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -371,17 +369,9 @@ namespace DollarComputers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected DollarComputersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected productsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
-                get {
-                    return this.columnId;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -643,34 +633,33 @@ namespace DollarComputers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DollarComputersRow this[int index] {
+            public productsRow this[int index] {
                 get {
-                    return ((DollarComputersRow)(this.Rows[index]));
+                    return ((productsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DollarComputersRowChangeEventHandler DollarComputersRowChanging;
+            public event productsRowChangeEventHandler productsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DollarComputersRowChangeEventHandler DollarComputersRowChanged;
+            public event productsRowChangeEventHandler productsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DollarComputersRowChangeEventHandler DollarComputersRowDeleting;
+            public event productsRowChangeEventHandler productsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DollarComputersRowChangeEventHandler DollarComputersRowDeleted;
+            public event productsRowChangeEventHandler productsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddDollarComputersRow(DollarComputersRow row) {
+            public void AddproductsRow(productsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DollarComputersRow AddDollarComputersRow(
-                        int Id, 
+            public productsRow AddproductsRow(
                         decimal cost, 
                         string manufacturer, 
                         string model, 
@@ -701,9 +690,8 @@ namespace DollarComputers {
                         string moust_type, 
                         string power, 
                         string webcam) {
-                DollarComputersRow rowDollarComputersRow = ((DollarComputersRow)(this.NewRow()));
+                productsRow rowproductsRow = ((productsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
                         null,
                         cost,
                         manufacturer,
@@ -735,22 +723,22 @@ namespace DollarComputers {
                         moust_type,
                         power,
                         webcam};
-                rowDollarComputersRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDollarComputersRow);
-                return rowDollarComputersRow;
+                rowproductsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowproductsRow);
+                return rowproductsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DollarComputersRow FindById(int Id) {
-                return ((DollarComputersRow)(this.Rows.Find(new object[] {
-                            Id})));
+            public productsRow FindByproductID(short productID) {
+                return ((productsRow)(this.Rows.Find(new object[] {
+                            productID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DollarComputersDataTable cln = ((DollarComputersDataTable)(base.Clone()));
+                productsDataTable cln = ((productsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -758,13 +746,12 @@ namespace DollarComputers {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DollarComputersDataTable();
+                return new productsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
                 this.columnproductID = base.Columns["productID"];
                 this.columncost = base.Columns["cost"];
                 this.columnmanufacturer = base.Columns["manufacturer"];
@@ -801,8 +788,6 @@ namespace DollarComputers {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
                 this.columnproductID = new global::System.Data.DataColumn("productID", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnproductID);
                 this.columncost = new global::System.Data.DataColumn("cost", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -866,14 +851,13 @@ namespace DollarComputers {
                 this.columnwebcam = new global::System.Data.DataColumn("webcam", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnwebcam);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AllowDBNull = false;
-                this.columnId.Unique = true;
+                                this.columnproductID}, true));
                 this.columnproductID.AutoIncrement = true;
                 this.columnproductID.AutoIncrementSeed = -1;
                 this.columnproductID.AutoIncrementStep = -1;
                 this.columnproductID.AllowDBNull = false;
                 this.columnproductID.ReadOnly = true;
+                this.columnproductID.Unique = true;
                 this.columnmanufacturer.MaxLength = 255;
                 this.columnmodel.MaxLength = 255;
                 this.columnRAM_type.MaxLength = 255;
@@ -907,28 +891,28 @@ namespace DollarComputers {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DollarComputersRow NewDollarComputersRow() {
-                return ((DollarComputersRow)(this.NewRow()));
+            public productsRow NewproductsRow() {
+                return ((productsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DollarComputersRow(builder);
+                return new productsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DollarComputersRow);
+                return typeof(productsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DollarComputersRowChanged != null)) {
-                    this.DollarComputersRowChanged(this, new DollarComputersRowChangeEvent(((DollarComputersRow)(e.Row)), e.Action));
+                if ((this.productsRowChanged != null)) {
+                    this.productsRowChanged(this, new productsRowChangeEvent(((productsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -936,8 +920,8 @@ namespace DollarComputers {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DollarComputersRowChanging != null)) {
-                    this.DollarComputersRowChanging(this, new DollarComputersRowChangeEvent(((DollarComputersRow)(e.Row)), e.Action));
+                if ((this.productsRowChanging != null)) {
+                    this.productsRowChanging(this, new productsRowChangeEvent(((productsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -945,8 +929,8 @@ namespace DollarComputers {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DollarComputersRowDeleted != null)) {
-                    this.DollarComputersRowDeleted(this, new DollarComputersRowChangeEvent(((DollarComputersRow)(e.Row)), e.Action));
+                if ((this.productsRowDeleted != null)) {
+                    this.productsRowDeleted(this, new productsRowChangeEvent(((productsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -954,14 +938,14 @@ namespace DollarComputers {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DollarComputersRowDeleting != null)) {
-                    this.DollarComputersRowDeleting(this, new DollarComputersRowChangeEvent(((DollarComputersRow)(e.Row)), e.Action));
+                if ((this.productsRowDeleting != null)) {
+                    this.productsRowDeleting(this, new productsRowChangeEvent(((productsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveDollarComputersRow(DollarComputersRow row) {
+            public void RemoveproductsRow(productsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -988,7 +972,7 @@ namespace DollarComputers {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DollarComputersDataTable";
+                attribute2.FixedValue = "productsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1032,36 +1016,25 @@ namespace DollarComputers {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DollarComputersRow : global::System.Data.DataRow {
+        public partial class productsRow : global::System.Data.DataRow {
             
-            private DollarComputersDataTable tableDollarComputers;
+            private productsDataTable tableproducts;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DollarComputersRow(global::System.Data.DataRowBuilder rb) : 
+            internal productsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDollarComputers = ((DollarComputersDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Id {
-                get {
-                    return ((int)(this[this.tableDollarComputers.IdColumn]));
-                }
-                set {
-                    this[this.tableDollarComputers.IdColumn] = value;
-                }
+                this.tableproducts = ((productsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public short productID {
                 get {
-                    return ((short)(this[this.tableDollarComputers.productIDColumn]));
+                    return ((short)(this[this.tableproducts.productIDColumn]));
                 }
                 set {
-                    this[this.tableDollarComputers.productIDColumn] = value;
+                    this[this.tableproducts.productIDColumn] = value;
                 }
             }
             
@@ -1070,14 +1043,14 @@ namespace DollarComputers {
             public decimal cost {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDollarComputers.costColumn]));
+                        return ((decimal)(this[this.tableproducts.costColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cost\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'cost\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.costColumn] = value;
+                    this[this.tableproducts.costColumn] = value;
                 }
             }
             
@@ -1086,14 +1059,14 @@ namespace DollarComputers {
             public string manufacturer {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.manufacturerColumn]));
+                        return ((string)(this[this.tableproducts.manufacturerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'manufacturer\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'manufacturer\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.manufacturerColumn] = value;
+                    this[this.tableproducts.manufacturerColumn] = value;
                 }
             }
             
@@ -1102,14 +1075,14 @@ namespace DollarComputers {
             public string model {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.modelColumn]));
+                        return ((string)(this[this.tableproducts.modelColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'model\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'model\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.modelColumn] = value;
+                    this[this.tableproducts.modelColumn] = value;
                 }
             }
             
@@ -1118,14 +1091,14 @@ namespace DollarComputers {
             public string RAM_type {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.RAM_typeColumn]));
+                        return ((string)(this[this.tableproducts.RAM_typeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RAM_type\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RAM_type\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.RAM_typeColumn] = value;
+                    this[this.tableproducts.RAM_typeColumn] = value;
                 }
             }
             
@@ -1134,14 +1107,14 @@ namespace DollarComputers {
             public string RAM_size {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.RAM_sizeColumn]));
+                        return ((string)(this[this.tableproducts.RAM_sizeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RAM_size\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RAM_size\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.RAM_sizeColumn] = value;
+                    this[this.tableproducts.RAM_sizeColumn] = value;
                 }
             }
             
@@ -1150,14 +1123,14 @@ namespace DollarComputers {
             public string displaytype {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.displaytypeColumn]));
+                        return ((string)(this[this.tableproducts.displaytypeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'displaytype\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'displaytype\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.displaytypeColumn] = value;
+                    this[this.tableproducts.displaytypeColumn] = value;
                 }
             }
             
@@ -1166,14 +1139,14 @@ namespace DollarComputers {
             public string screensize {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.screensizeColumn]));
+                        return ((string)(this[this.tableproducts.screensizeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'screensize\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'screensize\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.screensizeColumn] = value;
+                    this[this.tableproducts.screensizeColumn] = value;
                 }
             }
             
@@ -1182,14 +1155,14 @@ namespace DollarComputers {
             public string resolution {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.resolutionColumn]));
+                        return ((string)(this[this.tableproducts.resolutionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'resolution\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'resolution\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.resolutionColumn] = value;
+                    this[this.tableproducts.resolutionColumn] = value;
                 }
             }
             
@@ -1198,14 +1171,14 @@ namespace DollarComputers {
             public string CPU_Class {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.CPU_ClassColumn]));
+                        return ((string)(this[this.tableproducts.CPU_ClassColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CPU_Class\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CPU_Class\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.CPU_ClassColumn] = value;
+                    this[this.tableproducts.CPU_ClassColumn] = value;
                 }
             }
             
@@ -1214,14 +1187,14 @@ namespace DollarComputers {
             public string CPU_brand {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.CPU_brandColumn]));
+                        return ((string)(this[this.tableproducts.CPU_brandColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CPU_brand\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CPU_brand\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.CPU_brandColumn] = value;
+                    this[this.tableproducts.CPU_brandColumn] = value;
                 }
             }
             
@@ -1230,14 +1203,14 @@ namespace DollarComputers {
             public string CPU_type {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.CPU_typeColumn]));
+                        return ((string)(this[this.tableproducts.CPU_typeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CPU_type\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CPU_type\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.CPU_typeColumn] = value;
+                    this[this.tableproducts.CPU_typeColumn] = value;
                 }
             }
             
@@ -1246,14 +1219,14 @@ namespace DollarComputers {
             public string CPU_speed {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.CPU_speedColumn]));
+                        return ((string)(this[this.tableproducts.CPU_speedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CPU_speed\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CPU_speed\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.CPU_speedColumn] = value;
+                    this[this.tableproducts.CPU_speedColumn] = value;
                 }
             }
             
@@ -1262,14 +1235,14 @@ namespace DollarComputers {
             public string CPU_number {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.CPU_numberColumn]));
+                        return ((string)(this[this.tableproducts.CPU_numberColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CPU_number\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CPU_number\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.CPU_numberColumn] = value;
+                    this[this.tableproducts.CPU_numberColumn] = value;
                 }
             }
             
@@ -1278,14 +1251,14 @@ namespace DollarComputers {
             public string condition {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.conditionColumn]));
+                        return ((string)(this[this.tableproducts.conditionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'condition\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'condition\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.conditionColumn] = value;
+                    this[this.tableproducts.conditionColumn] = value;
                 }
             }
             
@@ -1294,14 +1267,14 @@ namespace DollarComputers {
             public string OS {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.OSColumn]));
+                        return ((string)(this[this.tableproducts.OSColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OS\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'OS\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.OSColumn] = value;
+                    this[this.tableproducts.OSColumn] = value;
                 }
             }
             
@@ -1310,14 +1283,14 @@ namespace DollarComputers {
             public string platform {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.platformColumn]));
+                        return ((string)(this[this.tableproducts.platformColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'platform\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'platform\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.platformColumn] = value;
+                    this[this.tableproducts.platformColumn] = value;
                 }
             }
             
@@ -1326,14 +1299,14 @@ namespace DollarComputers {
             public string HDD_size {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.HDD_sizeColumn]));
+                        return ((string)(this[this.tableproducts.HDD_sizeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HDD_size\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'HDD_size\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.HDD_sizeColumn] = value;
+                    this[this.tableproducts.HDD_sizeColumn] = value;
                 }
             }
             
@@ -1342,14 +1315,14 @@ namespace DollarComputers {
             public string HDD_speed {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.HDD_speedColumn]));
+                        return ((string)(this[this.tableproducts.HDD_speedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HDD_speed\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'HDD_speed\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.HDD_speedColumn] = value;
+                    this[this.tableproducts.HDD_speedColumn] = value;
                 }
             }
             
@@ -1358,14 +1331,14 @@ namespace DollarComputers {
             public string GPU_Type {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.GPU_TypeColumn]));
+                        return ((string)(this[this.tableproducts.GPU_TypeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'GPU_Type\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'GPU_Type\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.GPU_TypeColumn] = value;
+                    this[this.tableproducts.GPU_TypeColumn] = value;
                 }
             }
             
@@ -1374,14 +1347,14 @@ namespace DollarComputers {
             public string optical_drive {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.optical_driveColumn]));
+                        return ((string)(this[this.tableproducts.optical_driveColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'optical_drive\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'optical_drive\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.optical_driveColumn] = value;
+                    this[this.tableproducts.optical_driveColumn] = value;
                 }
             }
             
@@ -1390,14 +1363,14 @@ namespace DollarComputers {
             public string Audio_type {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.Audio_typeColumn]));
+                        return ((string)(this[this.tableproducts.Audio_typeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Audio_type\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Audio_type\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.Audio_typeColumn] = value;
+                    this[this.tableproducts.Audio_typeColumn] = value;
                 }
             }
             
@@ -1406,14 +1379,14 @@ namespace DollarComputers {
             public string LAN {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.LANColumn]));
+                        return ((string)(this[this.tableproducts.LANColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LAN\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'LAN\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.LANColumn] = value;
+                    this[this.tableproducts.LANColumn] = value;
                 }
             }
             
@@ -1422,14 +1395,14 @@ namespace DollarComputers {
             public string WIFI {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.WIFIColumn]));
+                        return ((string)(this[this.tableproducts.WIFIColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'WIFI\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'WIFI\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.WIFIColumn] = value;
+                    this[this.tableproducts.WIFIColumn] = value;
                 }
             }
             
@@ -1438,14 +1411,14 @@ namespace DollarComputers {
             public string width {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.widthColumn]));
+                        return ((string)(this[this.tableproducts.widthColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'width\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'width\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.widthColumn] = value;
+                    this[this.tableproducts.widthColumn] = value;
                 }
             }
             
@@ -1454,14 +1427,14 @@ namespace DollarComputers {
             public string height {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.heightColumn]));
+                        return ((string)(this[this.tableproducts.heightColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'height\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'height\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.heightColumn] = value;
+                    this[this.tableproducts.heightColumn] = value;
                 }
             }
             
@@ -1470,14 +1443,14 @@ namespace DollarComputers {
             public string depth {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.depthColumn]));
+                        return ((string)(this[this.tableproducts.depthColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'depth\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'depth\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.depthColumn] = value;
+                    this[this.tableproducts.depthColumn] = value;
                 }
             }
             
@@ -1486,14 +1459,14 @@ namespace DollarComputers {
             public string weight {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.weightColumn]));
+                        return ((string)(this[this.tableproducts.weightColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'weight\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'weight\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.weightColumn] = value;
+                    this[this.tableproducts.weightColumn] = value;
                 }
             }
             
@@ -1502,14 +1475,14 @@ namespace DollarComputers {
             public string moust_type {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.moust_typeColumn]));
+                        return ((string)(this[this.tableproducts.moust_typeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'moust_type\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'moust_type\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.moust_typeColumn] = value;
+                    this[this.tableproducts.moust_typeColumn] = value;
                 }
             }
             
@@ -1518,14 +1491,14 @@ namespace DollarComputers {
             public string power {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.powerColumn]));
+                        return ((string)(this[this.tableproducts.powerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'power\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'power\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.powerColumn] = value;
+                    this[this.tableproducts.powerColumn] = value;
                 }
             }
             
@@ -1534,375 +1507,375 @@ namespace DollarComputers {
             public string webcam {
                 get {
                     try {
-                        return ((string)(this[this.tableDollarComputers.webcamColumn]));
+                        return ((string)(this[this.tableproducts.webcamColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'webcam\' in table \'DollarComputers\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'webcam\' in table \'products\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDollarComputers.webcamColumn] = value;
+                    this[this.tableproducts.webcamColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IscostNull() {
-                return this.IsNull(this.tableDollarComputers.costColumn);
+                return this.IsNull(this.tableproducts.costColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetcostNull() {
-                this[this.tableDollarComputers.costColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.costColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsmanufacturerNull() {
-                return this.IsNull(this.tableDollarComputers.manufacturerColumn);
+                return this.IsNull(this.tableproducts.manufacturerColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetmanufacturerNull() {
-                this[this.tableDollarComputers.manufacturerColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.manufacturerColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsmodelNull() {
-                return this.IsNull(this.tableDollarComputers.modelColumn);
+                return this.IsNull(this.tableproducts.modelColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetmodelNull() {
-                this[this.tableDollarComputers.modelColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.modelColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRAM_typeNull() {
-                return this.IsNull(this.tableDollarComputers.RAM_typeColumn);
+                return this.IsNull(this.tableproducts.RAM_typeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRAM_typeNull() {
-                this[this.tableDollarComputers.RAM_typeColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.RAM_typeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRAM_sizeNull() {
-                return this.IsNull(this.tableDollarComputers.RAM_sizeColumn);
+                return this.IsNull(this.tableproducts.RAM_sizeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRAM_sizeNull() {
-                this[this.tableDollarComputers.RAM_sizeColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.RAM_sizeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsdisplaytypeNull() {
-                return this.IsNull(this.tableDollarComputers.displaytypeColumn);
+                return this.IsNull(this.tableproducts.displaytypeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetdisplaytypeNull() {
-                this[this.tableDollarComputers.displaytypeColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.displaytypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsscreensizeNull() {
-                return this.IsNull(this.tableDollarComputers.screensizeColumn);
+                return this.IsNull(this.tableproducts.screensizeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetscreensizeNull() {
-                this[this.tableDollarComputers.screensizeColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.screensizeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsresolutionNull() {
-                return this.IsNull(this.tableDollarComputers.resolutionColumn);
+                return this.IsNull(this.tableproducts.resolutionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetresolutionNull() {
-                this[this.tableDollarComputers.resolutionColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.resolutionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCPU_ClassNull() {
-                return this.IsNull(this.tableDollarComputers.CPU_ClassColumn);
+                return this.IsNull(this.tableproducts.CPU_ClassColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCPU_ClassNull() {
-                this[this.tableDollarComputers.CPU_ClassColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.CPU_ClassColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCPU_brandNull() {
-                return this.IsNull(this.tableDollarComputers.CPU_brandColumn);
+                return this.IsNull(this.tableproducts.CPU_brandColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCPU_brandNull() {
-                this[this.tableDollarComputers.CPU_brandColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.CPU_brandColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCPU_typeNull() {
-                return this.IsNull(this.tableDollarComputers.CPU_typeColumn);
+                return this.IsNull(this.tableproducts.CPU_typeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCPU_typeNull() {
-                this[this.tableDollarComputers.CPU_typeColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.CPU_typeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCPU_speedNull() {
-                return this.IsNull(this.tableDollarComputers.CPU_speedColumn);
+                return this.IsNull(this.tableproducts.CPU_speedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCPU_speedNull() {
-                this[this.tableDollarComputers.CPU_speedColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.CPU_speedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCPU_numberNull() {
-                return this.IsNull(this.tableDollarComputers.CPU_numberColumn);
+                return this.IsNull(this.tableproducts.CPU_numberColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCPU_numberNull() {
-                this[this.tableDollarComputers.CPU_numberColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.CPU_numberColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsconditionNull() {
-                return this.IsNull(this.tableDollarComputers.conditionColumn);
+                return this.IsNull(this.tableproducts.conditionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetconditionNull() {
-                this[this.tableDollarComputers.conditionColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.conditionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsOSNull() {
-                return this.IsNull(this.tableDollarComputers.OSColumn);
+                return this.IsNull(this.tableproducts.OSColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetOSNull() {
-                this[this.tableDollarComputers.OSColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.OSColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsplatformNull() {
-                return this.IsNull(this.tableDollarComputers.platformColumn);
+                return this.IsNull(this.tableproducts.platformColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetplatformNull() {
-                this[this.tableDollarComputers.platformColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.platformColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsHDD_sizeNull() {
-                return this.IsNull(this.tableDollarComputers.HDD_sizeColumn);
+                return this.IsNull(this.tableproducts.HDD_sizeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetHDD_sizeNull() {
-                this[this.tableDollarComputers.HDD_sizeColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.HDD_sizeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsHDD_speedNull() {
-                return this.IsNull(this.tableDollarComputers.HDD_speedColumn);
+                return this.IsNull(this.tableproducts.HDD_speedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetHDD_speedNull() {
-                this[this.tableDollarComputers.HDD_speedColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.HDD_speedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsGPU_TypeNull() {
-                return this.IsNull(this.tableDollarComputers.GPU_TypeColumn);
+                return this.IsNull(this.tableproducts.GPU_TypeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetGPU_TypeNull() {
-                this[this.tableDollarComputers.GPU_TypeColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.GPU_TypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isoptical_driveNull() {
-                return this.IsNull(this.tableDollarComputers.optical_driveColumn);
+                return this.IsNull(this.tableproducts.optical_driveColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setoptical_driveNull() {
-                this[this.tableDollarComputers.optical_driveColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.optical_driveColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAudio_typeNull() {
-                return this.IsNull(this.tableDollarComputers.Audio_typeColumn);
+                return this.IsNull(this.tableproducts.Audio_typeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAudio_typeNull() {
-                this[this.tableDollarComputers.Audio_typeColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.Audio_typeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsLANNull() {
-                return this.IsNull(this.tableDollarComputers.LANColumn);
+                return this.IsNull(this.tableproducts.LANColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetLANNull() {
-                this[this.tableDollarComputers.LANColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.LANColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsWIFINull() {
-                return this.IsNull(this.tableDollarComputers.WIFIColumn);
+                return this.IsNull(this.tableproducts.WIFIColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetWIFINull() {
-                this[this.tableDollarComputers.WIFIColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.WIFIColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IswidthNull() {
-                return this.IsNull(this.tableDollarComputers.widthColumn);
+                return this.IsNull(this.tableproducts.widthColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetwidthNull() {
-                this[this.tableDollarComputers.widthColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.widthColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsheightNull() {
-                return this.IsNull(this.tableDollarComputers.heightColumn);
+                return this.IsNull(this.tableproducts.heightColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetheightNull() {
-                this[this.tableDollarComputers.heightColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.heightColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsdepthNull() {
-                return this.IsNull(this.tableDollarComputers.depthColumn);
+                return this.IsNull(this.tableproducts.depthColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetdepthNull() {
-                this[this.tableDollarComputers.depthColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.depthColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsweightNull() {
-                return this.IsNull(this.tableDollarComputers.weightColumn);
+                return this.IsNull(this.tableproducts.weightColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetweightNull() {
-                this[this.tableDollarComputers.weightColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.weightColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Ismoust_typeNull() {
-                return this.IsNull(this.tableDollarComputers.moust_typeColumn);
+                return this.IsNull(this.tableproducts.moust_typeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setmoust_typeNull() {
-                this[this.tableDollarComputers.moust_typeColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.moust_typeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IspowerNull() {
-                return this.IsNull(this.tableDollarComputers.powerColumn);
+                return this.IsNull(this.tableproducts.powerColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetpowerNull() {
-                this[this.tableDollarComputers.powerColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.powerColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IswebcamNull() {
-                return this.IsNull(this.tableDollarComputers.webcamColumn);
+                return this.IsNull(this.tableproducts.webcamColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetwebcamNull() {
-                this[this.tableDollarComputers.webcamColumn] = global::System.Convert.DBNull;
+                this[this.tableproducts.webcamColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1910,22 +1883,22 @@ namespace DollarComputers {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class DollarComputersRowChangeEvent : global::System.EventArgs {
+        public class productsRowChangeEvent : global::System.EventArgs {
             
-            private DollarComputersRow eventRow;
+            private productsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DollarComputersRowChangeEvent(DollarComputersRow row, global::System.Data.DataRowAction action) {
+            public productsRowChangeEvent(productsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DollarComputersRow Row {
+            public productsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1953,7 +1926,7 @@ namespace DollarComputers.DollarComputersDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DollarComputersTableAdapter : global::System.ComponentModel.Component {
+    public partial class productsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1967,7 +1940,7 @@ namespace DollarComputers.DollarComputersDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DollarComputersTableAdapter() {
+        public productsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2064,8 +2037,7 @@ namespace DollarComputers.DollarComputersDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DollarComputers";
-            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.DataSetTable = "products";
             tableMapping.ColumnMappings.Add("productID", "productID");
             tableMapping.ColumnMappings.Add("cost", "cost");
             tableMapping.ColumnMappings.Add("manufacturer", "manufacturer");
@@ -2100,43 +2072,41 @@ namespace DollarComputers.DollarComputersDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[DollarComputers] WHERE (([Id] = @Original_Id) AND ([productID]" +
-                " = @Original_productID) AND ((@IsNull_cost = 1 AND [cost] IS NULL) OR ([cost] = " +
-                "@Original_cost)) AND ((@IsNull_manufacturer = 1 AND [manufacturer] IS NULL) OR (" +
-                "[manufacturer] = @Original_manufacturer)) AND ((@IsNull_model = 1 AND [model] IS" +
-                " NULL) OR ([model] = @Original_model)) AND ((@IsNull_RAM_type = 1 AND [RAM_type]" +
-                " IS NULL) OR ([RAM_type] = @Original_RAM_type)) AND ((@IsNull_RAM_size = 1 AND [" +
-                "RAM_size] IS NULL) OR ([RAM_size] = @Original_RAM_size)) AND ((@IsNull_displayty" +
-                "pe = 1 AND [displaytype] IS NULL) OR ([displaytype] = @Original_displaytype)) AN" +
-                "D ((@IsNull_screensize = 1 AND [screensize] IS NULL) OR ([screensize] = @Origina" +
-                "l_screensize)) AND ((@IsNull_resolution = 1 AND [resolution] IS NULL) OR ([resol" +
-                "ution] = @Original_resolution)) AND ((@IsNull_CPU_Class = 1 AND [CPU_Class] IS N" +
-                "ULL) OR ([CPU_Class] = @Original_CPU_Class)) AND ((@IsNull_CPU_brand = 1 AND [CP" +
-                "U_brand] IS NULL) OR ([CPU_brand] = @Original_CPU_brand)) AND ((@IsNull_CPU_type" +
-                " = 1 AND [CPU_type] IS NULL) OR ([CPU_type] = @Original_CPU_type)) AND ((@IsNull" +
-                "_CPU_speed = 1 AND [CPU_speed] IS NULL) OR ([CPU_speed] = @Original_CPU_speed)) " +
-                "AND ((@IsNull_CPU_number = 1 AND [CPU_number] IS NULL) OR ([CPU_number] = @Origi" +
-                "nal_CPU_number)) AND ((@IsNull_condition = 1 AND [condition] IS NULL) OR ([condi" +
-                "tion] = @Original_condition)) AND ((@IsNull_OS = 1 AND [OS] IS NULL) OR ([OS] = " +
-                "@Original_OS)) AND ((@IsNull_platform = 1 AND [platform] IS NULL) OR ([platform]" +
-                " = @Original_platform)) AND ((@IsNull_HDD_size = 1 AND [HDD_size] IS NULL) OR ([" +
-                "HDD_size] = @Original_HDD_size)) AND ((@IsNull_HDD_speed = 1 AND [HDD_speed] IS " +
-                "NULL) OR ([HDD_speed] = @Original_HDD_speed)) AND ((@IsNull_GPU_Type = 1 AND [GP" +
-                "U_Type] IS NULL) OR ([GPU_Type] = @Original_GPU_Type)) AND ((@IsNull_optical_dri" +
-                "ve = 1 AND [optical_drive] IS NULL) OR ([optical_drive] = @Original_optical_driv" +
-                "e)) AND ((@IsNull_Audio_type = 1 AND [Audio_type] IS NULL) OR ([Audio_type] = @O" +
-                "riginal_Audio_type)) AND ((@IsNull_LAN = 1 AND [LAN] IS NULL) OR ([LAN] = @Origi" +
-                "nal_LAN)) AND ((@IsNull_WIFI = 1 AND [WIFI] IS NULL) OR ([WIFI] = @Original_WIFI" +
-                ")) AND ((@IsNull_width = 1 AND [width] IS NULL) OR ([width] = @Original_width)) " +
-                "AND ((@IsNull_height = 1 AND [height] IS NULL) OR ([height] = @Original_height))" +
-                " AND ((@IsNull_depth = 1 AND [depth] IS NULL) OR ([depth] = @Original_depth)) AN" +
-                "D ((@IsNull_weight = 1 AND [weight] IS NULL) OR ([weight] = @Original_weight)) A" +
-                "ND ((@IsNull_moust_type = 1 AND [moust_type] IS NULL) OR ([moust_type] = @Origin" +
-                "al_moust_type)) AND ((@IsNull_power = 1 AND [power] IS NULL) OR ([power] = @Orig" +
-                "inal_power)) AND ((@IsNull_webcam = 1 AND [webcam] IS NULL) OR ([webcam] = @Orig" +
-                "inal_webcam)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[products] WHERE (([productID] = @Original_productID) AND ((@Is" +
+                "Null_cost = 1 AND [cost] IS NULL) OR ([cost] = @Original_cost)) AND ((@IsNull_ma" +
+                "nufacturer = 1 AND [manufacturer] IS NULL) OR ([manufacturer] = @Original_manufa" +
+                "cturer)) AND ((@IsNull_model = 1 AND [model] IS NULL) OR ([model] = @Original_mo" +
+                "del)) AND ((@IsNull_RAM_type = 1 AND [RAM_type] IS NULL) OR ([RAM_type] = @Origi" +
+                "nal_RAM_type)) AND ((@IsNull_RAM_size = 1 AND [RAM_size] IS NULL) OR ([RAM_size]" +
+                " = @Original_RAM_size)) AND ((@IsNull_displaytype = 1 AND [displaytype] IS NULL)" +
+                " OR ([displaytype] = @Original_displaytype)) AND ((@IsNull_screensize = 1 AND [s" +
+                "creensize] IS NULL) OR ([screensize] = @Original_screensize)) AND ((@IsNull_reso" +
+                "lution = 1 AND [resolution] IS NULL) OR ([resolution] = @Original_resolution)) A" +
+                "ND ((@IsNull_CPU_Class = 1 AND [CPU_Class] IS NULL) OR ([CPU_Class] = @Original_" +
+                "CPU_Class)) AND ((@IsNull_CPU_brand = 1 AND [CPU_brand] IS NULL) OR ([CPU_brand]" +
+                " = @Original_CPU_brand)) AND ((@IsNull_CPU_type = 1 AND [CPU_type] IS NULL) OR (" +
+                "[CPU_type] = @Original_CPU_type)) AND ((@IsNull_CPU_speed = 1 AND [CPU_speed] IS" +
+                " NULL) OR ([CPU_speed] = @Original_CPU_speed)) AND ((@IsNull_CPU_number = 1 AND " +
+                "[CPU_number] IS NULL) OR ([CPU_number] = @Original_CPU_number)) AND ((@IsNull_co" +
+                "ndition = 1 AND [condition] IS NULL) OR ([condition] = @Original_condition)) AND" +
+                " ((@IsNull_OS = 1 AND [OS] IS NULL) OR ([OS] = @Original_OS)) AND ((@IsNull_plat" +
+                "form = 1 AND [platform] IS NULL) OR ([platform] = @Original_platform)) AND ((@Is" +
+                "Null_HDD_size = 1 AND [HDD_size] IS NULL) OR ([HDD_size] = @Original_HDD_size)) " +
+                "AND ((@IsNull_HDD_speed = 1 AND [HDD_speed] IS NULL) OR ([HDD_speed] = @Original" +
+                "_HDD_speed)) AND ((@IsNull_GPU_Type = 1 AND [GPU_Type] IS NULL) OR ([GPU_Type] =" +
+                " @Original_GPU_Type)) AND ((@IsNull_optical_drive = 1 AND [optical_drive] IS NUL" +
+                "L) OR ([optical_drive] = @Original_optical_drive)) AND ((@IsNull_Audio_type = 1 " +
+                "AND [Audio_type] IS NULL) OR ([Audio_type] = @Original_Audio_type)) AND ((@IsNul" +
+                "l_LAN = 1 AND [LAN] IS NULL) OR ([LAN] = @Original_LAN)) AND ((@IsNull_WIFI = 1 " +
+                "AND [WIFI] IS NULL) OR ([WIFI] = @Original_WIFI)) AND ((@IsNull_width = 1 AND [w" +
+                "idth] IS NULL) OR ([width] = @Original_width)) AND ((@IsNull_height = 1 AND [hei" +
+                "ght] IS NULL) OR ([height] = @Original_height)) AND ((@IsNull_depth = 1 AND [dep" +
+                "th] IS NULL) OR ([depth] = @Original_depth)) AND ((@IsNull_weight = 1 AND [weigh" +
+                "t] IS NULL) OR ([weight] = @Original_weight)) AND ((@IsNull_moust_type = 1 AND [" +
+                "moust_type] IS NULL) OR ([moust_type] = @Original_moust_type)) AND ((@IsNull_pow" +
+                "er = 1 AND [power] IS NULL) OR ([power] = @Original_power)) AND ((@IsNull_webcam" +
+                " = 1 AND [webcam] IS NULL) OR ([webcam] = @Original_webcam)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_productID", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "productID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cost", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cost", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2200,10 +2170,9 @@ namespace DollarComputers.DollarComputersDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_webcam", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "webcam", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DollarComputers] ([Id], [cost], [manufacturer], [model], [RAM_type], [RAM_size], [displaytype], [screensize], [resolution], [CPU_Class], [CPU_brand], [CPU_type], [CPU_speed], [CPU_number], [condition], [OS], [platform], [HDD_size], [HDD_speed], [GPU_Type], [optical_drive], [Audio_type], [LAN], [WIFI], [width], [height], [depth], [weight], [moust_type], [power], [webcam]) VALUES (@Id, @cost, @manufacturer, @model, @RAM_type, @RAM_size, @displaytype, @screensize, @resolution, @CPU_Class, @CPU_brand, @CPU_type, @CPU_speed, @CPU_number, @condition, @OS, @platform, @HDD_size, @HDD_speed, @GPU_Type, @optical_drive, @Audio_type, @LAN, @WIFI, @width, @height, @depth, @weight, @moust_type, @power, @webcam);
-SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype, screensize, resolution, CPU_Class, CPU_brand, CPU_type, CPU_speed, CPU_number, condition, OS, platform, HDD_size, HDD_speed, GPU_Type, optical_drive, Audio_type, LAN, WIFI, width, height, depth, weight, moust_type, power, webcam FROM DollarComputers WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[products] ([cost], [manufacturer], [model], [RAM_type], [RAM_size], [displaytype], [screensize], [resolution], [CPU_Class], [CPU_brand], [CPU_type], [CPU_speed], [CPU_number], [condition], [OS], [platform], [HDD_size], [HDD_speed], [GPU_Type], [optical_drive], [Audio_type], [LAN], [WIFI], [width], [height], [depth], [weight], [moust_type], [power], [webcam]) VALUES (@cost, @manufacturer, @model, @RAM_type, @RAM_size, @displaytype, @screensize, @resolution, @CPU_Class, @CPU_brand, @CPU_type, @CPU_speed, @CPU_number, @condition, @OS, @platform, @HDD_size, @HDD_speed, @GPU_Type, @optical_drive, @Audio_type, @LAN, @WIFI, @width, @height, @depth, @weight, @moust_type, @power, @webcam);
+SELECT productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype, screensize, resolution, CPU_Class, CPU_brand, CPU_type, CPU_speed, CPU_number, condition, OS, platform, HDD_size, HDD_speed, GPU_Type, optical_drive, Audio_type, LAN, WIFI, width, height, depth, weight, moust_type, power, webcam FROM products WHERE (productID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cost", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@manufacturer", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "manufacturer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2236,56 +2205,54 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@webcam", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "webcam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[DollarComputers] SET [Id] = @Id, [cost] = @cost, [manufacturer] = @" +
-                "manufacturer, [model] = @model, [RAM_type] = @RAM_type, [RAM_size] = @RAM_size, " +
-                "[displaytype] = @displaytype, [screensize] = @screensize, [resolution] = @resolu" +
-                "tion, [CPU_Class] = @CPU_Class, [CPU_brand] = @CPU_brand, [CPU_type] = @CPU_type" +
-                ", [CPU_speed] = @CPU_speed, [CPU_number] = @CPU_number, [condition] = @condition" +
-                ", [OS] = @OS, [platform] = @platform, [HDD_size] = @HDD_size, [HDD_speed] = @HDD" +
-                "_speed, [GPU_Type] = @GPU_Type, [optical_drive] = @optical_drive, [Audio_type] =" +
-                " @Audio_type, [LAN] = @LAN, [WIFI] = @WIFI, [width] = @width, [height] = @height" +
-                ", [depth] = @depth, [weight] = @weight, [moust_type] = @moust_type, [power] = @p" +
-                "ower, [webcam] = @webcam WHERE (([Id] = @Original_Id) AND ([productID] = @Origin" +
-                "al_productID) AND ((@IsNull_cost = 1 AND [cost] IS NULL) OR ([cost] = @Original_" +
-                "cost)) AND ((@IsNull_manufacturer = 1 AND [manufacturer] IS NULL) OR ([manufactu" +
-                "rer] = @Original_manufacturer)) AND ((@IsNull_model = 1 AND [model] IS NULL) OR " +
-                "([model] = @Original_model)) AND ((@IsNull_RAM_type = 1 AND [RAM_type] IS NULL) " +
-                "OR ([RAM_type] = @Original_RAM_type)) AND ((@IsNull_RAM_size = 1 AND [RAM_size] " +
-                "IS NULL) OR ([RAM_size] = @Original_RAM_size)) AND ((@IsNull_displaytype = 1 AND" +
-                " [displaytype] IS NULL) OR ([displaytype] = @Original_displaytype)) AND ((@IsNul" +
-                "l_screensize = 1 AND [screensize] IS NULL) OR ([screensize] = @Original_screensi" +
-                "ze)) AND ((@IsNull_resolution = 1 AND [resolution] IS NULL) OR ([resolution] = @" +
-                "Original_resolution)) AND ((@IsNull_CPU_Class = 1 AND [CPU_Class] IS NULL) OR ([" +
-                "CPU_Class] = @Original_CPU_Class)) AND ((@IsNull_CPU_brand = 1 AND [CPU_brand] I" +
-                "S NULL) OR ([CPU_brand] = @Original_CPU_brand)) AND ((@IsNull_CPU_type = 1 AND [" +
-                "CPU_type] IS NULL) OR ([CPU_type] = @Original_CPU_type)) AND ((@IsNull_CPU_speed" +
-                " = 1 AND [CPU_speed] IS NULL) OR ([CPU_speed] = @Original_CPU_speed)) AND ((@IsN" +
-                "ull_CPU_number = 1 AND [CPU_number] IS NULL) OR ([CPU_number] = @Original_CPU_nu" +
-                "mber)) AND ((@IsNull_condition = 1 AND [condition] IS NULL) OR ([condition] = @O" +
-                "riginal_condition)) AND ((@IsNull_OS = 1 AND [OS] IS NULL) OR ([OS] = @Original_" +
-                "OS)) AND ((@IsNull_platform = 1 AND [platform] IS NULL) OR ([platform] = @Origin" +
-                "al_platform)) AND ((@IsNull_HDD_size = 1 AND [HDD_size] IS NULL) OR ([HDD_size] " +
-                "= @Original_HDD_size)) AND ((@IsNull_HDD_speed = 1 AND [HDD_speed] IS NULL) OR (" +
-                "[HDD_speed] = @Original_HDD_speed)) AND ((@IsNull_GPU_Type = 1 AND [GPU_Type] IS" +
-                " NULL) OR ([GPU_Type] = @Original_GPU_Type)) AND ((@IsNull_optical_drive = 1 AND" +
-                " [optical_drive] IS NULL) OR ([optical_drive] = @Original_optical_drive)) AND ((" +
-                "@IsNull_Audio_type = 1 AND [Audio_type] IS NULL) OR ([Audio_type] = @Original_Au" +
-                "dio_type)) AND ((@IsNull_LAN = 1 AND [LAN] IS NULL) OR ([LAN] = @Original_LAN)) " +
-                "AND ((@IsNull_WIFI = 1 AND [WIFI] IS NULL) OR ([WIFI] = @Original_WIFI)) AND ((@" +
-                "IsNull_width = 1 AND [width] IS NULL) OR ([width] = @Original_width)) AND ((@IsN" +
-                "ull_height = 1 AND [height] IS NULL) OR ([height] = @Original_height)) AND ((@Is" +
-                "Null_depth = 1 AND [depth] IS NULL) OR ([depth] = @Original_depth)) AND ((@IsNul" +
-                "l_weight = 1 AND [weight] IS NULL) OR ([weight] = @Original_weight)) AND ((@IsNu" +
-                "ll_moust_type = 1 AND [moust_type] IS NULL) OR ([moust_type] = @Original_moust_t" +
-                "ype)) AND ((@IsNull_power = 1 AND [power] IS NULL) OR ([power] = @Original_power" +
-                ")) AND ((@IsNull_webcam = 1 AND [webcam] IS NULL) OR ([webcam] = @Original_webca" +
-                "m)));\r\nSELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, disp" +
-                "laytype, screensize, resolution, CPU_Class, CPU_brand, CPU_type, CPU_speed, CPU_" +
-                "number, condition, OS, platform, HDD_size, HDD_speed, GPU_Type, optical_drive, A" +
-                "udio_type, LAN, WIFI, width, height, depth, weight, moust_type, power, webcam FR" +
-                "OM DollarComputers WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[products] SET [cost] = @cost, [manufacturer] = @manufacturer, [mode" +
+                "l] = @model, [RAM_type] = @RAM_type, [RAM_size] = @RAM_size, [displaytype] = @di" +
+                "splaytype, [screensize] = @screensize, [resolution] = @resolution, [CPU_Class] =" +
+                " @CPU_Class, [CPU_brand] = @CPU_brand, [CPU_type] = @CPU_type, [CPU_speed] = @CP" +
+                "U_speed, [CPU_number] = @CPU_number, [condition] = @condition, [OS] = @OS, [plat" +
+                "form] = @platform, [HDD_size] = @HDD_size, [HDD_speed] = @HDD_speed, [GPU_Type] " +
+                "= @GPU_Type, [optical_drive] = @optical_drive, [Audio_type] = @Audio_type, [LAN]" +
+                " = @LAN, [WIFI] = @WIFI, [width] = @width, [height] = @height, [depth] = @depth," +
+                " [weight] = @weight, [moust_type] = @moust_type, [power] = @power, [webcam] = @w" +
+                "ebcam WHERE (([productID] = @Original_productID) AND ((@IsNull_cost = 1 AND [cos" +
+                "t] IS NULL) OR ([cost] = @Original_cost)) AND ((@IsNull_manufacturer = 1 AND [ma" +
+                "nufacturer] IS NULL) OR ([manufacturer] = @Original_manufacturer)) AND ((@IsNull" +
+                "_model = 1 AND [model] IS NULL) OR ([model] = @Original_model)) AND ((@IsNull_RA" +
+                "M_type = 1 AND [RAM_type] IS NULL) OR ([RAM_type] = @Original_RAM_type)) AND ((@" +
+                "IsNull_RAM_size = 1 AND [RAM_size] IS NULL) OR ([RAM_size] = @Original_RAM_size)" +
+                ") AND ((@IsNull_displaytype = 1 AND [displaytype] IS NULL) OR ([displaytype] = @" +
+                "Original_displaytype)) AND ((@IsNull_screensize = 1 AND [screensize] IS NULL) OR" +
+                " ([screensize] = @Original_screensize)) AND ((@IsNull_resolution = 1 AND [resolu" +
+                "tion] IS NULL) OR ([resolution] = @Original_resolution)) AND ((@IsNull_CPU_Class" +
+                " = 1 AND [CPU_Class] IS NULL) OR ([CPU_Class] = @Original_CPU_Class)) AND ((@IsN" +
+                "ull_CPU_brand = 1 AND [CPU_brand] IS NULL) OR ([CPU_brand] = @Original_CPU_brand" +
+                ")) AND ((@IsNull_CPU_type = 1 AND [CPU_type] IS NULL) OR ([CPU_type] = @Original" +
+                "_CPU_type)) AND ((@IsNull_CPU_speed = 1 AND [CPU_speed] IS NULL) OR ([CPU_speed]" +
+                " = @Original_CPU_speed)) AND ((@IsNull_CPU_number = 1 AND [CPU_number] IS NULL) " +
+                "OR ([CPU_number] = @Original_CPU_number)) AND ((@IsNull_condition = 1 AND [condi" +
+                "tion] IS NULL) OR ([condition] = @Original_condition)) AND ((@IsNull_OS = 1 AND " +
+                "[OS] IS NULL) OR ([OS] = @Original_OS)) AND ((@IsNull_platform = 1 AND [platform" +
+                "] IS NULL) OR ([platform] = @Original_platform)) AND ((@IsNull_HDD_size = 1 AND " +
+                "[HDD_size] IS NULL) OR ([HDD_size] = @Original_HDD_size)) AND ((@IsNull_HDD_spee" +
+                "d = 1 AND [HDD_speed] IS NULL) OR ([HDD_speed] = @Original_HDD_speed)) AND ((@Is" +
+                "Null_GPU_Type = 1 AND [GPU_Type] IS NULL) OR ([GPU_Type] = @Original_GPU_Type)) " +
+                "AND ((@IsNull_optical_drive = 1 AND [optical_drive] IS NULL) OR ([optical_drive]" +
+                " = @Original_optical_drive)) AND ((@IsNull_Audio_type = 1 AND [Audio_type] IS NU" +
+                "LL) OR ([Audio_type] = @Original_Audio_type)) AND ((@IsNull_LAN = 1 AND [LAN] IS" +
+                " NULL) OR ([LAN] = @Original_LAN)) AND ((@IsNull_WIFI = 1 AND [WIFI] IS NULL) OR" +
+                " ([WIFI] = @Original_WIFI)) AND ((@IsNull_width = 1 AND [width] IS NULL) OR ([wi" +
+                "dth] = @Original_width)) AND ((@IsNull_height = 1 AND [height] IS NULL) OR ([hei" +
+                "ght] = @Original_height)) AND ((@IsNull_depth = 1 AND [depth] IS NULL) OR ([dept" +
+                "h] = @Original_depth)) AND ((@IsNull_weight = 1 AND [weight] IS NULL) OR ([weigh" +
+                "t] = @Original_weight)) AND ((@IsNull_moust_type = 1 AND [moust_type] IS NULL) O" +
+                "R ([moust_type] = @Original_moust_type)) AND ((@IsNull_power = 1 AND [power] IS " +
+                "NULL) OR ([power] = @Original_power)) AND ((@IsNull_webcam = 1 AND [webcam] IS N" +
+                "ULL) OR ([webcam] = @Original_webcam)));\r\nSELECT productID, cost, manufacturer, " +
+                "model, RAM_type, RAM_size, displaytype, screensize, resolution, CPU_Class, CPU_b" +
+                "rand, CPU_type, CPU_speed, CPU_number, condition, OS, platform, HDD_size, HDD_sp" +
+                "eed, GPU_Type, optical_drive, Audio_type, LAN, WIFI, width, height, depth, weigh" +
+                "t, moust_type, power, webcam FROM products WHERE (productID = @productID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cost", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@manufacturer", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "manufacturer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2316,7 +2283,6 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@moust_type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "moust_type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@power", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "power", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@webcam", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "webcam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_productID", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "productID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cost", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cost", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2378,6 +2344,7 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_power", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "power", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_webcam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "webcam", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_webcam", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "webcam", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@productID", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 0, 0, "productID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2393,7 +2360,7 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype, screensize, resolution, CPU_Class, CPU_brand, CPU_type, CPU_speed, CPU_number, condition, OS, platform, HDD_size, HDD_speed, GPU_Type, optical_drive, Audio_type, LAN, WIFI, width, height, depth, weight, moust_type, power, webcam FROM dbo.DollarComputers";
+            this._commandCollection[0].CommandText = @"SELECT productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype, screensize, resolution, CPU_Class, CPU_brand, CPU_type, CPU_speed, CPU_number, condition, OS, platform, HDD_size, HDD_speed, GPU_Type, optical_drive, Audio_type, LAN, WIFI, width, height, depth, weight, moust_type, power, webcam FROM dbo.products";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2401,7 +2368,7 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DollarComputersDataSet.DollarComputersDataTable dataTable) {
+        public virtual int Fill(DollarComputersDataSet.productsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2414,9 +2381,9 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DollarComputersDataSet.DollarComputersDataTable GetData() {
+        public virtual DollarComputersDataSet.productsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DollarComputersDataSet.DollarComputersDataTable dataTable = new DollarComputersDataSet.DollarComputersDataTable();
+            DollarComputersDataSet.productsDataTable dataTable = new DollarComputersDataSet.productsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2424,7 +2391,7 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DollarComputersDataSet.DollarComputersDataTable dataTable) {
+        public virtual int Update(DollarComputersDataSet.productsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -2432,7 +2399,7 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DollarComputersDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "DollarComputers");
+            return this.Adapter.Update(dataSet, "products");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2455,7 +2422,6 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
         public virtual int Delete(
-                    int Original_Id, 
                     short Original_productID, 
                     global::System.Nullable<decimal> Original_cost, 
                     string Original_manufacturer, 
@@ -2487,247 +2453,246 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
                     string Original_moust_type, 
                     string Original_power, 
                     string Original_webcam) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((short)(Original_productID));
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((short)(Original_productID));
             if ((Original_cost.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_cost.Value));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_cost.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((Original_manufacturer == null)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_manufacturer));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_manufacturer));
             }
             if ((Original_model == null)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_model));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_model));
             }
             if ((Original_RAM_type == null)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_RAM_type));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_RAM_type));
             }
             if ((Original_RAM_size == null)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_RAM_size));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_RAM_size));
             }
             if ((Original_displaytype == null)) {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_displaytype));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_displaytype));
             }
             if ((Original_screensize == null)) {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_screensize));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_screensize));
             }
             if ((Original_resolution == null)) {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((string)(Original_resolution));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_resolution));
             }
             if ((Original_CPU_Class == null)) {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((string)(Original_CPU_Class));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_CPU_Class));
             }
             if ((Original_CPU_brand == null)) {
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((string)(Original_CPU_brand));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_CPU_brand));
             }
             if ((Original_CPU_type == null)) {
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((string)(Original_CPU_type));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_CPU_type));
             }
             if ((Original_CPU_speed == null)) {
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((string)(Original_CPU_speed));
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_CPU_speed));
             }
             if ((Original_CPU_number == null)) {
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((string)(Original_CPU_number));
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_CPU_number));
             }
             if ((Original_condition == null)) {
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((string)(Original_condition));
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((string)(Original_condition));
             }
             if ((Original_OS == null)) {
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((string)(Original_OS));
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((string)(Original_OS));
             }
             if ((Original_platform == null)) {
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[33].Value = ((string)(Original_platform));
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_platform));
             }
             if ((Original_HDD_size == null)) {
-                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[35].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[35].Value = ((string)(Original_HDD_size));
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_HDD_size));
             }
             if ((Original_HDD_speed == null)) {
-                this.Adapter.DeleteCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[37].Value = ((string)(Original_HDD_speed));
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_HDD_speed));
             }
             if ((Original_GPU_Type == null)) {
-                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[39].Value = ((string)(Original_GPU_Type));
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((string)(Original_GPU_Type));
             }
             if ((Original_optical_drive == null)) {
-                this.Adapter.DeleteCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[41].Value = ((string)(Original_optical_drive));
+                this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[40].Value = ((string)(Original_optical_drive));
             }
             if ((Original_Audio_type == null)) {
-                this.Adapter.DeleteCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[43].Value = ((string)(Original_Audio_type));
+                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[42].Value = ((string)(Original_Audio_type));
             }
             if ((Original_LAN == null)) {
-                this.Adapter.DeleteCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[45].Value = ((string)(Original_LAN));
+                this.Adapter.DeleteCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[44].Value = ((string)(Original_LAN));
             }
             if ((Original_WIFI == null)) {
-                this.Adapter.DeleteCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[47].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[47].Value = ((string)(Original_WIFI));
+                this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[46].Value = ((string)(Original_WIFI));
             }
             if ((Original_width == null)) {
-                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[49].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[49].Value = ((string)(Original_width));
+                this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((string)(Original_width));
             }
             if ((Original_height == null)) {
-                this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[51].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[51].Value = ((string)(Original_height));
+                this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[50].Value = ((string)(Original_height));
             }
             if ((Original_depth == null)) {
-                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[53].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[53].Value = ((string)(Original_depth));
+                this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((string)(Original_depth));
             }
             if ((Original_weight == null)) {
-                this.Adapter.DeleteCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[55].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[55].Value = ((string)(Original_weight));
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[54].Value = ((string)(Original_weight));
             }
             if ((Original_moust_type == null)) {
-                this.Adapter.DeleteCommand.Parameters[56].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[57].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[56].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[57].Value = ((string)(Original_moust_type));
+                this.Adapter.DeleteCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[56].Value = ((string)(Original_moust_type));
             }
             if ((Original_power == null)) {
-                this.Adapter.DeleteCommand.Parameters[58].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[59].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[58].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[58].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[59].Value = ((string)(Original_power));
+                this.Adapter.DeleteCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[58].Value = ((string)(Original_power));
             }
             if ((Original_webcam == null)) {
-                this.Adapter.DeleteCommand.Parameters[60].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[61].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[59].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[60].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[60].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[61].Value = ((string)(Original_webcam));
+                this.Adapter.DeleteCommand.Parameters[59].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[60].Value = ((string)(Original_webcam));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2750,7 +2715,6 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(
-                    int Id, 
                     global::System.Nullable<decimal> cost, 
                     string manufacturer, 
                     string model, 
@@ -2781,186 +2745,185 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
                     string moust_type, 
                     string power, 
                     string webcam) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
             if ((cost.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(cost.Value));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(cost.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             if ((manufacturer == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(manufacturer));
+            }
+            if ((model == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(manufacturer));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(model));
             }
-            if ((model == null)) {
+            if ((RAM_type == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(model));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(RAM_type));
             }
-            if ((RAM_type == null)) {
+            if ((RAM_size == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(RAM_type));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(RAM_size));
             }
-            if ((RAM_size == null)) {
+            if ((displaytype == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(RAM_size));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(displaytype));
             }
-            if ((displaytype == null)) {
+            if ((screensize == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(displaytype));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(screensize));
             }
-            if ((screensize == null)) {
+            if ((resolution == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(screensize));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(resolution));
             }
-            if ((resolution == null)) {
+            if ((CPU_Class == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(resolution));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(CPU_Class));
             }
-            if ((CPU_Class == null)) {
+            if ((CPU_brand == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(CPU_Class));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(CPU_brand));
             }
-            if ((CPU_brand == null)) {
+            if ((CPU_type == null)) {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(CPU_brand));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(CPU_type));
             }
-            if ((CPU_type == null)) {
+            if ((CPU_speed == null)) {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(CPU_type));
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(CPU_speed));
             }
-            if ((CPU_speed == null)) {
+            if ((CPU_number == null)) {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(CPU_speed));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(CPU_number));
             }
-            if ((CPU_number == null)) {
+            if ((condition == null)) {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(CPU_number));
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(condition));
             }
-            if ((condition == null)) {
+            if ((OS == null)) {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(condition));
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(OS));
             }
-            if ((OS == null)) {
+            if ((platform == null)) {
                 this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(OS));
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(platform));
             }
-            if ((platform == null)) {
+            if ((HDD_size == null)) {
                 this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(platform));
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(HDD_size));
             }
-            if ((HDD_size == null)) {
+            if ((HDD_speed == null)) {
                 this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(HDD_size));
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(HDD_speed));
             }
-            if ((HDD_speed == null)) {
+            if ((GPU_Type == null)) {
                 this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(HDD_speed));
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(GPU_Type));
             }
-            if ((GPU_Type == null)) {
+            if ((optical_drive == null)) {
                 this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(GPU_Type));
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(optical_drive));
             }
-            if ((optical_drive == null)) {
+            if ((Audio_type == null)) {
                 this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(optical_drive));
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(Audio_type));
             }
-            if ((Audio_type == null)) {
+            if ((LAN == null)) {
                 this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[21].Value = ((string)(Audio_type));
+                this.Adapter.InsertCommand.Parameters[21].Value = ((string)(LAN));
             }
-            if ((LAN == null)) {
+            if ((WIFI == null)) {
                 this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[22].Value = ((string)(LAN));
+                this.Adapter.InsertCommand.Parameters[22].Value = ((string)(WIFI));
             }
-            if ((WIFI == null)) {
+            if ((width == null)) {
                 this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[23].Value = ((string)(WIFI));
+                this.Adapter.InsertCommand.Parameters[23].Value = ((string)(width));
             }
-            if ((width == null)) {
+            if ((height == null)) {
                 this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[24].Value = ((string)(width));
+                this.Adapter.InsertCommand.Parameters[24].Value = ((string)(height));
             }
-            if ((height == null)) {
+            if ((depth == null)) {
                 this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[25].Value = ((string)(height));
+                this.Adapter.InsertCommand.Parameters[25].Value = ((string)(depth));
             }
-            if ((depth == null)) {
+            if ((weight == null)) {
                 this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(depth));
+                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(weight));
             }
-            if ((weight == null)) {
+            if ((moust_type == null)) {
                 this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[27].Value = ((string)(weight));
+                this.Adapter.InsertCommand.Parameters[27].Value = ((string)(moust_type));
             }
-            if ((moust_type == null)) {
+            if ((power == null)) {
                 this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(moust_type));
+                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(power));
             }
-            if ((power == null)) {
+            if ((webcam == null)) {
                 this.Adapter.InsertCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[29].Value = ((string)(power));
-            }
-            if ((webcam == null)) {
-                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[30].Value = ((string)(webcam));
+                this.Adapter.InsertCommand.Parameters[29].Value = ((string)(webcam));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2983,7 +2946,6 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    int Id, 
                     global::System.Nullable<decimal> cost, 
                     string manufacturer, 
                     string model, 
@@ -3014,7 +2976,6 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
                     string moust_type, 
                     string power, 
                     string webcam, 
-                    int Original_Id, 
                     short Original_productID, 
                     global::System.Nullable<decimal> Original_cost, 
                     string Original_manufacturer, 
@@ -3045,430 +3006,430 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
                     string Original_weight, 
                     string Original_moust_type, 
                     string Original_power, 
-                    string Original_webcam) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
+                    string Original_webcam, 
+                    short productID) {
             if ((cost.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(cost.Value));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(cost.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             if ((manufacturer == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(manufacturer));
+            }
+            if ((model == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(manufacturer));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(model));
             }
-            if ((model == null)) {
+            if ((RAM_type == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(model));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(RAM_type));
             }
-            if ((RAM_type == null)) {
+            if ((RAM_size == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(RAM_type));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(RAM_size));
             }
-            if ((RAM_size == null)) {
+            if ((displaytype == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(RAM_size));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(displaytype));
             }
-            if ((displaytype == null)) {
+            if ((screensize == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(displaytype));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(screensize));
             }
-            if ((screensize == null)) {
+            if ((resolution == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(screensize));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(resolution));
             }
-            if ((resolution == null)) {
+            if ((CPU_Class == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(resolution));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(CPU_Class));
             }
-            if ((CPU_Class == null)) {
+            if ((CPU_brand == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(CPU_Class));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(CPU_brand));
             }
-            if ((CPU_brand == null)) {
+            if ((CPU_type == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(CPU_brand));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(CPU_type));
             }
-            if ((CPU_type == null)) {
+            if ((CPU_speed == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(CPU_type));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(CPU_speed));
             }
-            if ((CPU_speed == null)) {
+            if ((CPU_number == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(CPU_speed));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(CPU_number));
             }
-            if ((CPU_number == null)) {
+            if ((condition == null)) {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(CPU_number));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(condition));
             }
-            if ((condition == null)) {
+            if ((OS == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(condition));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(OS));
             }
-            if ((OS == null)) {
+            if ((platform == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(OS));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(platform));
             }
-            if ((platform == null)) {
+            if ((HDD_size == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(platform));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(HDD_size));
             }
-            if ((HDD_size == null)) {
+            if ((HDD_speed == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(HDD_size));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(HDD_speed));
             }
-            if ((HDD_speed == null)) {
+            if ((GPU_Type == null)) {
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(HDD_speed));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(GPU_Type));
             }
-            if ((GPU_Type == null)) {
+            if ((optical_drive == null)) {
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(GPU_Type));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(optical_drive));
             }
-            if ((optical_drive == null)) {
+            if ((Audio_type == null)) {
                 this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(optical_drive));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Audio_type));
             }
-            if ((Audio_type == null)) {
+            if ((LAN == null)) {
                 this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Audio_type));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(LAN));
             }
-            if ((LAN == null)) {
+            if ((WIFI == null)) {
                 this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(LAN));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(WIFI));
             }
-            if ((WIFI == null)) {
+            if ((width == null)) {
                 this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(WIFI));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(width));
             }
-            if ((width == null)) {
+            if ((height == null)) {
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(width));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(height));
             }
-            if ((height == null)) {
+            if ((depth == null)) {
                 this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(height));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(depth));
             }
-            if ((depth == null)) {
+            if ((weight == null)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(depth));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(weight));
             }
-            if ((weight == null)) {
+            if ((moust_type == null)) {
                 this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(weight));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(moust_type));
             }
-            if ((moust_type == null)) {
+            if ((power == null)) {
                 this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(moust_type));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(power));
             }
-            if ((power == null)) {
+            if ((webcam == null)) {
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(power));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(webcam));
             }
-            if ((webcam == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(webcam));
-            }
-            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((short)(Original_productID));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((short)(Original_productID));
             if ((Original_cost.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((decimal)(Original_cost.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((decimal)(Original_cost.Value));
             }
             else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((Original_manufacturer == null)) {
                 this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
-            if ((Original_manufacturer == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_manufacturer));
+            }
+            if ((Original_model == null)) {
                 this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_manufacturer));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_model));
             }
-            if ((Original_model == null)) {
+            if ((Original_RAM_type == null)) {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_model));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_RAM_type));
             }
-            if ((Original_RAM_type == null)) {
+            if ((Original_RAM_size == null)) {
                 this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_RAM_type));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_RAM_size));
             }
-            if ((Original_RAM_size == null)) {
+            if ((Original_displaytype == null)) {
                 this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_RAM_size));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_displaytype));
             }
-            if ((Original_displaytype == null)) {
+            if ((Original_screensize == null)) {
                 this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_displaytype));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_screensize));
             }
-            if ((Original_screensize == null)) {
+            if ((Original_resolution == null)) {
                 this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_screensize));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_resolution));
             }
-            if ((Original_resolution == null)) {
+            if ((Original_CPU_Class == null)) {
                 this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_resolution));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_CPU_Class));
             }
-            if ((Original_CPU_Class == null)) {
+            if ((Original_CPU_brand == null)) {
                 this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_CPU_Class));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_CPU_brand));
             }
-            if ((Original_CPU_brand == null)) {
+            if ((Original_CPU_type == null)) {
                 this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_CPU_brand));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_CPU_type));
             }
-            if ((Original_CPU_type == null)) {
+            if ((Original_CPU_speed == null)) {
                 this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_CPU_type));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_CPU_speed));
             }
-            if ((Original_CPU_speed == null)) {
+            if ((Original_CPU_number == null)) {
                 this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_CPU_speed));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_CPU_number));
             }
-            if ((Original_CPU_number == null)) {
+            if ((Original_condition == null)) {
                 this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_CPU_number));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_condition));
             }
-            if ((Original_condition == null)) {
+            if ((Original_OS == null)) {
                 this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((string)(Original_condition));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((string)(Original_OS));
             }
-            if ((Original_OS == null)) {
+            if ((Original_platform == null)) {
                 this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((string)(Original_OS));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((string)(Original_platform));
             }
-            if ((Original_platform == null)) {
+            if ((Original_HDD_size == null)) {
                 this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((string)(Original_platform));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((string)(Original_HDD_size));
             }
-            if ((Original_HDD_size == null)) {
+            if ((Original_HDD_speed == null)) {
                 this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((string)(Original_HDD_size));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((string)(Original_HDD_speed));
             }
-            if ((Original_HDD_speed == null)) {
+            if ((Original_GPU_Type == null)) {
                 this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((string)(Original_HDD_speed));
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((string)(Original_GPU_Type));
             }
-            if ((Original_GPU_Type == null)) {
+            if ((Original_optical_drive == null)) {
                 this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((string)(Original_GPU_Type));
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((string)(Original_optical_drive));
             }
-            if ((Original_optical_drive == null)) {
+            if ((Original_Audio_type == null)) {
                 this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((string)(Original_optical_drive));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((string)(Original_Audio_type));
             }
-            if ((Original_Audio_type == null)) {
+            if ((Original_LAN == null)) {
                 this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((string)(Original_Audio_type));
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((string)(Original_LAN));
             }
-            if ((Original_LAN == null)) {
+            if ((Original_WIFI == null)) {
                 this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((string)(Original_LAN));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((string)(Original_WIFI));
             }
-            if ((Original_WIFI == null)) {
+            if ((Original_width == null)) {
                 this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((string)(Original_WIFI));
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((string)(Original_width));
             }
-            if ((Original_width == null)) {
+            if ((Original_height == null)) {
                 this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[80].Value = ((string)(Original_width));
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((string)(Original_height));
             }
-            if ((Original_height == null)) {
+            if ((Original_depth == null)) {
                 this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[82].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[82].Value = ((string)(Original_height));
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((string)(Original_depth));
             }
-            if ((Original_depth == null)) {
+            if ((Original_weight == null)) {
                 this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[84].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[84].Value = ((string)(Original_depth));
+                this.Adapter.UpdateCommand.Parameters[84].Value = ((string)(Original_weight));
             }
-            if ((Original_weight == null)) {
+            if ((Original_moust_type == null)) {
                 this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[86].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[86].Value = ((string)(Original_weight));
+                this.Adapter.UpdateCommand.Parameters[86].Value = ((string)(Original_moust_type));
             }
-            if ((Original_moust_type == null)) {
+            if ((Original_power == null)) {
                 this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[88].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[88].Value = ((string)(Original_moust_type));
+                this.Adapter.UpdateCommand.Parameters[88].Value = ((string)(Original_power));
             }
-            if ((Original_power == null)) {
+            if ((Original_webcam == null)) {
                 this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[90].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[90].Value = ((string)(Original_power));
+                this.Adapter.UpdateCommand.Parameters[90].Value = ((string)(Original_webcam));
             }
-            if ((Original_webcam == null)) {
-                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[92].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[92].Value = ((string)(Original_webcam));
-            }
+            this.Adapter.UpdateCommand.Parameters[91].Value = ((short)(productID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3520,7 +3481,6 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
                     string moust_type, 
                     string power, 
                     string webcam, 
-                    int Original_Id, 
                     short Original_productID, 
                     global::System.Nullable<decimal> Original_cost, 
                     string Original_manufacturer, 
@@ -3552,7 +3512,7 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
                     string Original_moust_type, 
                     string Original_power, 
                     string Original_webcam) {
-            return this.Update(Original_Id, cost, manufacturer, model, RAM_type, RAM_size, displaytype, screensize, resolution, CPU_Class, CPU_brand, CPU_type, CPU_speed, CPU_number, condition, OS, platform, HDD_size, HDD_speed, GPU_Type, optical_drive, Audio_type, LAN, WIFI, width, height, depth, weight, moust_type, power, webcam, Original_Id, Original_productID, Original_cost, Original_manufacturer, Original_model, Original_RAM_type, Original_RAM_size, Original_displaytype, Original_screensize, Original_resolution, Original_CPU_Class, Original_CPU_brand, Original_CPU_type, Original_CPU_speed, Original_CPU_number, Original_condition, Original_OS, Original_platform, Original_HDD_size, Original_HDD_speed, Original_GPU_Type, Original_optical_drive, Original_Audio_type, Original_LAN, Original_WIFI, Original_width, Original_height, Original_depth, Original_weight, Original_moust_type, Original_power, Original_webcam);
+            return this.Update(cost, manufacturer, model, RAM_type, RAM_size, displaytype, screensize, resolution, CPU_Class, CPU_brand, CPU_type, CPU_speed, CPU_number, condition, OS, platform, HDD_size, HDD_speed, GPU_Type, optical_drive, Audio_type, LAN, WIFI, width, height, depth, weight, moust_type, power, webcam, Original_productID, Original_cost, Original_manufacturer, Original_model, Original_RAM_type, Original_RAM_size, Original_displaytype, Original_screensize, Original_resolution, Original_CPU_Class, Original_CPU_brand, Original_CPU_type, Original_CPU_speed, Original_CPU_number, Original_condition, Original_OS, Original_platform, Original_HDD_size, Original_HDD_speed, Original_GPU_Type, Original_optical_drive, Original_Audio_type, Original_LAN, Original_WIFI, Original_width, Original_height, Original_depth, Original_weight, Original_moust_type, Original_power, Original_webcam, Original_productID);
         }
     }
     
@@ -3568,7 +3528,7 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         
         private UpdateOrderOption _updateOrder;
         
-        private DollarComputersTableAdapter _dollarComputersTableAdapter;
+        private productsTableAdapter _productsTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -3590,12 +3550,12 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public DollarComputersTableAdapter DollarComputersTableAdapter {
+        public productsTableAdapter productsTableAdapter {
             get {
-                return this._dollarComputersTableAdapter;
+                return this._productsTableAdapter;
             }
             set {
-                this._dollarComputersTableAdapter = value;
+                this._productsTableAdapter = value;
             }
         }
         
@@ -3618,9 +3578,9 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._dollarComputersTableAdapter != null) 
-                            && (this._dollarComputersTableAdapter.Connection != null))) {
-                    return this._dollarComputersTableAdapter.Connection;
+                if (((this._productsTableAdapter != null) 
+                            && (this._productsTableAdapter.Connection != null))) {
+                    return this._productsTableAdapter.Connection;
                 }
                 return null;
             }
@@ -3635,7 +3595,7 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._dollarComputersTableAdapter != null)) {
+                if ((this._productsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -3649,12 +3609,12 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(DollarComputersDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._dollarComputersTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DollarComputers.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._productsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.products.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._dollarComputersTableAdapter.Update(updatedRows));
+                    result = (result + this._productsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -3668,11 +3628,11 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(DollarComputersDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._dollarComputersTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DollarComputers.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._productsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.products.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._dollarComputersTableAdapter.Update(addedRows));
+                    result = (result + this._productsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -3686,11 +3646,11 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DollarComputersDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._dollarComputersTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DollarComputers.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._productsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.products.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._dollarComputersTableAdapter.Update(deletedRows));
+                    result = (result + this._productsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -3733,8 +3693,8 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._dollarComputersTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._dollarComputersTableAdapter.Connection) == false))) {
+            if (((this._productsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._productsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -3770,13 +3730,13 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._dollarComputersTableAdapter != null)) {
-                    revertConnections.Add(this._dollarComputersTableAdapter, this._dollarComputersTableAdapter.Connection);
-                    this._dollarComputersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._dollarComputersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._dollarComputersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._dollarComputersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._dollarComputersTableAdapter.Adapter);
+                if ((this._productsTableAdapter != null)) {
+                    revertConnections.Add(this._productsTableAdapter, this._productsTableAdapter.Connection);
+                    this._productsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._productsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._productsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._productsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._productsTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -3837,9 +3797,9 @@ SELECT Id, productID, cost, manufacturer, model, RAM_type, RAM_size, displaytype
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._dollarComputersTableAdapter != null)) {
-                    this._dollarComputersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dollarComputersTableAdapter]));
-                    this._dollarComputersTableAdapter.Transaction = null;
+                if ((this._productsTableAdapter != null)) {
+                    this._productsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._productsTableAdapter]));
+                    this._productsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

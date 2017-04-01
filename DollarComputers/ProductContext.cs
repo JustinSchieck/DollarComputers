@@ -1,14 +1,14 @@
-namespace DollarComputers.Models
+namespace DollarComputers
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ProductsContext : DbContext
+    public partial class ProductContext : DbContext
     {
-        public ProductsContext()
-            : base("name=ProductsContextConnection")
+        public ProductContext()
+            : base("name=ProductContextConnection")
         {
         }
 
