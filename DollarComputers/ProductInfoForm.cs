@@ -168,9 +168,7 @@ namespace DollarComputers
             OrderForm orderform = new OrderForm();
             orderform.PreviousForm = this;
             orderform.Show();
-            this.Hide();
+            Hide();
         }
-
-
     }
 }
