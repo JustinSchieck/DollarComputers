@@ -51,7 +51,7 @@
             this.WebcamTextbox = new System.Windows.Forms.TextBox();
             this.GPUTypeTextbox = new System.Windows.Forms.TextBox();
             this.HDDTextbox = new System.Windows.Forms.TextBox();
-            this.CPUSpeed = new System.Windows.Forms.TextBox();
+            this.CPUSpeedTextbox = new System.Windows.Forms.TextBox();
             this.CPUNumberTextbox = new System.Windows.Forms.TextBox();
             this.CPUTypeTextbox = new System.Windows.Forms.TextBox();
             this.CPUBrandTextbox = new System.Windows.Forms.TextBox();
@@ -111,6 +111,7 @@
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
             this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -145,6 +146,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -211,13 +213,15 @@
             // 
             this.ModelTextbox.Location = new System.Drawing.Point(416, 85);
             this.ModelTextbox.Name = "ModelTextbox";
+            this.ModelTextbox.ReadOnly = true;
             this.ModelTextbox.Size = new System.Drawing.Size(146, 22);
             this.ModelTextbox.TabIndex = 3;
             // 
             // PlatformTextbox
             // 
-            this.PlatformTextbox.Location = new System.Drawing.Point(416, 34);
+            this.PlatformTextbox.Location = new System.Drawing.Point(416, 32);
             this.PlatformTextbox.Name = "PlatformTextbox";
+            this.PlatformTextbox.ReadOnly = true;
             this.PlatformTextbox.Size = new System.Drawing.Size(146, 22);
             this.PlatformTextbox.TabIndex = 2;
             // 
@@ -225,6 +229,7 @@
             // 
             this.ManufacturerTextbox.Location = new System.Drawing.Point(114, 85);
             this.ManufacturerTextbox.Name = "ManufacturerTextbox";
+            this.ManufacturerTextbox.ReadOnly = true;
             this.ManufacturerTextbox.Size = new System.Drawing.Size(146, 22);
             this.ManufacturerTextbox.TabIndex = 1;
             // 
@@ -232,6 +237,7 @@
             // 
             this.ConditionTextbox.Location = new System.Drawing.Point(114, 34);
             this.ConditionTextbox.Name = "ConditionTextbox";
+            this.ConditionTextbox.ReadOnly = true;
             this.ConditionTextbox.Size = new System.Drawing.Size(146, 22);
             this.ConditionTextbox.TabIndex = 0;
             // 
@@ -242,7 +248,7 @@
             this.SystemGroupBox2.Controls.Add(this.WebcamTextbox);
             this.SystemGroupBox2.Controls.Add(this.GPUTypeTextbox);
             this.SystemGroupBox2.Controls.Add(this.HDDTextbox);
-            this.SystemGroupBox2.Controls.Add(this.CPUSpeed);
+            this.SystemGroupBox2.Controls.Add(this.CPUSpeedTextbox);
             this.SystemGroupBox2.Controls.Add(this.CPUNumberTextbox);
             this.SystemGroupBox2.Controls.Add(this.CPUTypeTextbox);
             this.SystemGroupBox2.Controls.Add(this.CPUBrandTextbox);
@@ -269,6 +275,7 @@
             this.OSTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OSTextbox.Location = new System.Drawing.Point(114, 336);
             this.OSTextbox.Name = "OSTextbox";
+            this.OSTextbox.ReadOnly = true;
             this.OSTextbox.Size = new System.Drawing.Size(480, 15);
             this.OSTextbox.TabIndex = 20;
             // 
@@ -277,6 +284,7 @@
             this.WebcamTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.WebcamTextbox.Location = new System.Drawing.Point(114, 303);
             this.WebcamTextbox.Name = "WebcamTextbox";
+            this.WebcamTextbox.ReadOnly = true;
             this.WebcamTextbox.Size = new System.Drawing.Size(480, 15);
             this.WebcamTextbox.TabIndex = 19;
             // 
@@ -285,6 +293,7 @@
             this.GPUTypeTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GPUTypeTextbox.Location = new System.Drawing.Point(114, 271);
             this.GPUTypeTextbox.Name = "GPUTypeTextbox";
+            this.GPUTypeTextbox.ReadOnly = true;
             this.GPUTypeTextbox.Size = new System.Drawing.Size(480, 15);
             this.GPUTypeTextbox.TabIndex = 18;
             // 
@@ -293,22 +302,25 @@
             this.HDDTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.HDDTextbox.Location = new System.Drawing.Point(114, 238);
             this.HDDTextbox.Name = "HDDTextbox";
+            this.HDDTextbox.ReadOnly = true;
             this.HDDTextbox.Size = new System.Drawing.Size(480, 15);
             this.HDDTextbox.TabIndex = 17;
             // 
-            // CPUSpeed
+            // CPUSpeedTextbox
             // 
-            this.CPUSpeed.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CPUSpeed.Location = new System.Drawing.Point(114, 206);
-            this.CPUSpeed.Name = "CPUSpeed";
-            this.CPUSpeed.Size = new System.Drawing.Size(480, 15);
-            this.CPUSpeed.TabIndex = 16;
+            this.CPUSpeedTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CPUSpeedTextbox.Location = new System.Drawing.Point(114, 206);
+            this.CPUSpeedTextbox.Name = "CPUSpeedTextbox";
+            this.CPUSpeedTextbox.ReadOnly = true;
+            this.CPUSpeedTextbox.Size = new System.Drawing.Size(480, 15);
+            this.CPUSpeedTextbox.TabIndex = 16;
             // 
             // CPUNumberTextbox
             // 
             this.CPUNumberTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CPUNumberTextbox.Location = new System.Drawing.Point(114, 165);
             this.CPUNumberTextbox.Name = "CPUNumberTextbox";
+            this.CPUNumberTextbox.ReadOnly = true;
             this.CPUNumberTextbox.Size = new System.Drawing.Size(480, 15);
             this.CPUNumberTextbox.TabIndex = 15;
             // 
@@ -317,6 +329,7 @@
             this.CPUTypeTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CPUTypeTextbox.Location = new System.Drawing.Point(114, 126);
             this.CPUTypeTextbox.Name = "CPUTypeTextbox";
+            this.CPUTypeTextbox.ReadOnly = true;
             this.CPUTypeTextbox.Size = new System.Drawing.Size(480, 15);
             this.CPUTypeTextbox.TabIndex = 14;
             // 
@@ -325,6 +338,7 @@
             this.CPUBrandTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CPUBrandTextbox.Location = new System.Drawing.Point(114, 89);
             this.CPUBrandTextbox.Name = "CPUBrandTextbox";
+            this.CPUBrandTextbox.ReadOnly = true;
             this.CPUBrandTextbox.Size = new System.Drawing.Size(480, 15);
             this.CPUBrandTextbox.TabIndex = 13;
             // 
@@ -333,6 +347,7 @@
             this.MemoryTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MemoryTextbox.Location = new System.Drawing.Point(114, 57);
             this.MemoryTextbox.Name = "MemoryTextbox";
+            this.MemoryTextbox.ReadOnly = true;
             this.MemoryTextbox.Size = new System.Drawing.Size(480, 15);
             this.MemoryTextbox.TabIndex = 12;
             // 
@@ -341,6 +356,7 @@
             this.LCDTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LCDTextbox.Location = new System.Drawing.Point(114, 24);
             this.LCDTextbox.Name = "LCDTextbox";
+            this.LCDTextbox.ReadOnly = true;
             this.LCDTextbox.Size = new System.Drawing.Size(480, 15);
             this.LCDTextbox.TabIndex = 11;
             // 
@@ -511,6 +527,7 @@
             this.BackButton.TabIndex = 5;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // CancelButton
             // 
@@ -536,7 +553,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1149, 601);
+            this.ClientSize = new System.Drawing.Size(1149, 606);
             this.ControlBox = false;
             this.Controls.Add(this.FinishButton);
             this.Controls.Add(this.CancelButton);
@@ -549,7 +566,8 @@
             this.MainMenuStrip = this.MenuStrip;
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "OrderForm";
+            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -609,7 +627,7 @@
         private System.Windows.Forms.TextBox WebcamTextbox;
         private System.Windows.Forms.TextBox GPUTypeTextbox;
         private System.Windows.Forms.TextBox HDDTextbox;
-        private System.Windows.Forms.TextBox CPUSpeed;
+        private System.Windows.Forms.TextBox CPUSpeedTextbox;
         private System.Windows.Forms.TextBox CPUNumberTextbox;
         private System.Windows.Forms.TextBox CPUTypeTextbox;
         private System.Windows.Forms.TextBox CPUBrandTextbox;

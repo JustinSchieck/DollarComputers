@@ -17,6 +17,7 @@ namespace DollarComputers
         public SelectForm PreviousForm { get; set; }
         public object SaveProductFileDialog { get; private set; }
 
+
         private StreamWriter _writer;
         private StreamReader _reader;
         private const char _DELIMETER = ',';
@@ -164,10 +165,9 @@ namespace DollarComputers
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            OrderForm orderForm = new OrderForm();
-
-
-            orderForm.Show();
+            OrderForm orderform = new OrderForm();
+            orderform.PreviousForm = this;
+            orderform.Show();
             this.Hide();
         }
 

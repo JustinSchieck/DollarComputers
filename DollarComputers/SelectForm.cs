@@ -14,7 +14,6 @@ namespace DollarComputers
     {
         //public variables
         public StartForm PreviousForm;
-
         //private variables
         private product product;
         private ProductContext DBO = new ProductContext();
@@ -62,7 +61,6 @@ namespace DollarComputers
 
         private void FillInfo()
         {
-
             if (Program.ChosenProduct != null)
             {
                 product = Program.ChosenProduct;
@@ -75,7 +73,6 @@ namespace DollarComputers
                 }
 
             }
-
             ChoiceTextBox.Text = CompDataGridView.SelectedRows[0].Cells[2].Value.ToString() + ", " + CompDataGridView.SelectedRows[0].Cells[3].Value.ToString()
               + ", Priced at: " + CompDataGridView.SelectedRows[0].Cells[1].Value.ToString();
         }
