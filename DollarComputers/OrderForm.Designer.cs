@@ -111,7 +111,7 @@
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
             this.printToolStripMenuItem.Text = "&Print";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            this.printToolStripMenuItem.Click += new System.EventHandler(this._printToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -146,7 +146,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.aboutToolStripMenuItem.Text = "&About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this._aboutToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -235,7 +235,7 @@
             // 
             // ConditionTextbox
             // 
-            this.ConditionTextbox.Location = new System.Drawing.Point(114, 34);
+            this.ConditionTextbox.Location = new System.Drawing.Point(115, 34);
             this.ConditionTextbox.Name = "ConditionTextbox";
             this.ConditionTextbox.ReadOnly = true;
             this.ConditionTextbox.Size = new System.Drawing.Size(146, 22);
@@ -527,7 +527,7 @@
             this.BackButton.TabIndex = 5;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.BackButton.Click += new System.EventHandler(this._BackButton_Click);
             // 
             // CancelButton
             // 
@@ -537,7 +537,7 @@
             this.CancelButton.TabIndex = 6;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.Click += new System.EventHandler(this._CancelButton_Click);
             // 
             // FinishButton
             // 
@@ -547,7 +547,7 @@
             this.FinishButton.TabIndex = 7;
             this.FinishButton.Text = "Finish";
             this.FinishButton.UseVisualStyleBackColor = true;
-            this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
+            this.FinishButton.Click += new System.EventHandler(this._FinishButton_Click);
             // 
             // OrderForm
             // 
@@ -567,7 +567,7 @@
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
-            this.Load += new System.EventHandler(this.OrderForm_Load);
+            this.Load += new System.EventHandler(this._OrderForm_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

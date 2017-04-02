@@ -14,10 +14,20 @@ namespace DollarComputers
 {
     public partial class ProductInfoForm : Form
     {
+        /// <summary>
+        /// Program: Dollar Computers Assignment 3
+        /// Name: Justin Schieck
+        /// StudentID: 200328630
+        /// App Creation Date: April 4th, 2017
+        /// App Desc: Computer OrderForm 
+        /// </summary>
+        
+      
+        //public variables
         public SelectForm PreviousForm { get; set; }
         public object SaveProductFileDialog { get; private set; }
 
-
+        //private variables
         private StreamWriter _writer;
         private StreamReader _reader;
         private const char _DELIMETER = ',';
@@ -29,7 +39,13 @@ namespace DollarComputers
             this._product = new product();
         }
 
-        private void ProductInfoForm_Load(object sender, EventArgs e)
+
+        /// <summary>
+        /// fills textboxes as form loads
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _ProductInfoForm_Load(object sender, EventArgs e)
         {
             ProductIDTextbox.Text = Program.ChosenProduct.productID.ToString();
             ConditionTextbox.Text = Program.ChosenProduct.condition;
@@ -50,24 +66,24 @@ namespace DollarComputers
         }
 
 
-        private void AnoutherProductButton_Click(object sender, EventArgs e)
+        private void _AnoutherProductButton_Click(object sender, EventArgs e)
         {
             this.PreviousForm.Show();
             this.Close();
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void _saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveInfo();
+            _SaveInfo();
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void _openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReadInfo();
+            _ReadInfo();
         }
 
-        //Event Methods
-        private void ReadInfo()
+        //Method for reading
+        private void _ReadInfo()
         {
             string fullProductString = "";
             try
@@ -109,8 +125,8 @@ namespace DollarComputers
             }
             this._reader.Close();
         }
-
-        private void SaveInfo()
+        //Writing method
+        private void _SaveInfo()
         {
             //makes sure user is ready to save
             DialogResult UserResult = MessageBox.Show("Are You Sure?", "Confirm", MessageBoxButtons.YesNo);
@@ -134,7 +150,7 @@ namespace DollarComputers
                     GPUTextbox.Text + _DELIMETER + 
                     WebcamTextbox.Text);
 
-              //Close the file
+                 //Close the file
                 _writer.Close();
 
                 // Resets all boxes
@@ -158,17 +174,16 @@ namespace DollarComputers
 
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void _CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void NextButton_Click(object sender, EventArgs e)
+        private void _NextButton_Click(object sender, EventArgs e)
         {
             OrderForm orderform = new OrderForm();
-            orderform.PreviousForm = this;
             orderform.Show();
-            Hide();
+            this.Hide();
         }
     }
 }

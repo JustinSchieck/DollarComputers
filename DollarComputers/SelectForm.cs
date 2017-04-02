@@ -12,6 +12,15 @@ namespace DollarComputers
 {
     public partial class SelectForm : Form
     {
+        /// <summary>
+        /// Program: Dollar Computers Assignment 3
+        /// Name: Justin Schieck
+        /// StudentID: 200328630
+        /// App Creation Date: April 4th, 2017
+        /// App Desc: Computer OrderForm 
+        /// </summary>
+         
+ 
         //public variables
         public StartForm PreviousForm;
         //private variables

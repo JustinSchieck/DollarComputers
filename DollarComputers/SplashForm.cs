@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace DollarComputers
 {
+
+
+    /// <summary>
+    /// Program: Dollar Computers Assignment 3
+    /// Name: Justin Schieck
+    /// StudentID: 200328630
+    /// App Creation Date: April 4th, 2017
+    /// App Desc: Computer OrderForm 
+    /// </summary>
+
     public partial class SplashForm : Form
     {
         public SplashForm()
         {
             InitializeComponent();
         }
-
-        private void SplashTimer_Tick(object sender, EventArgs e)
+        //splash timer for how long it should be open
+        private void _SplashTimer_Tick(object sender, EventArgs e)
         {
             StartForm startForm = new StartForm();
 

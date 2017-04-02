@@ -374,7 +374,7 @@
             this.AnoutherProductButton.TabIndex = 3;
             this.AnoutherProductButton.Text = "Select Another Product";
             this.AnoutherProductButton.UseVisualStyleBackColor = true;
-            this.AnoutherProductButton.Click += new System.EventHandler(this.AnoutherProductButton_Click);
+            this.AnoutherProductButton.Click += new System.EventHandler(this._AnoutherProductButton_Click);
             // 
             // CancelButton
             // 
@@ -384,7 +384,7 @@
             this.CancelButton.TabIndex = 4;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.Click += new System.EventHandler(this._CancelButton_Click);
             // 
             // NextButton
             // 
@@ -394,7 +394,7 @@
             this.NextButton.TabIndex = 5;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            this.NextButton.Click += new System.EventHandler(this._NextButton_Click);
             // 
             // ProductIDLabel
             // 
@@ -477,14 +477,14 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.openToolStripMenuItem.Text = "&Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            this.openToolStripMenuItem.Click += new System.EventHandler(this._openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.saveToolStripMenuItem.Text = "&Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this._saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -529,7 +529,7 @@
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductForm";
-            this.Load += new System.EventHandler(this.ProductInfoForm_Load);
+            this.Load += new System.EventHandler(this._ProductInfoForm_Load);
             this.ProductInfoGroupBox.ResumeLayout(false);
             this.ProductInfoGroupBox.PerformLayout();
             this.TechSpecsGroupBox.ResumeLayout(false);

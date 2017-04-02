@@ -12,11 +12,31 @@ namespace DollarComputers
 {
     public partial class OrderForm : Form
     {
+
+        /// <summary>
+        /// Program: Dollar Computers Assignment 3
+        /// Name: Justin Schieck
+        /// StudentID: 200328630
+        /// App Creation Date: April 4th, 2017
+        /// App Desc: Computer OrderForm 
+        /// </summary>
+
+
         public ProductInfoForm PreviousForm { get; set; }
 
         public OrderForm()
         {
             InitializeComponent();
+
+
+        }
+        /// <summary>
+        /// fills textboxs in form on loading the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _OrderForm_Load(object sender, EventArgs e)
+        {
             ConditionTextbox.Text = Program.ChosenProduct.condition;
             PlatformTextbox.Text = Program.ChosenProduct.platform;
             ManufacturerTextbox.Text = Program.ChosenProduct.manufacturer;
@@ -38,44 +58,37 @@ namespace DollarComputers
             double Tax = Subtotal * 0.13;
             SalesTaxTextbox.Text = Tax.ToString();
             TotalTextbox.Text = (Subtotal * 1.13).ToString();
-
         }
 
-
-        private void FillForm()
-        {
-
-
-        }
-        private void OrderForm_Load(object sender, EventArgs e)
-        {
-            FillForm();
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
+        //exits form
+        private void _CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void FinishButton_Click(object sender, EventArgs e)
+        //closes form and says days till shipment
+        private void _FinishButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thank you!" + "\n" + "\n" +"Your Items will be shipped in 7 to 10 days" );
             Application.Exit();
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
+        //backbutton to go back to productinfo form
+        private void _BackButton_Click(object sender, EventArgs e)
         {
             this.PreviousForm.Show();
             this.Close();
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        //about menu item
+        private void _aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutBox aboutbox = new AboutBox();
             aboutbox.ShowDialog();
         }
 
-        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        //simulates a print message
+        private void _printToolStripMenuItem_Click(object sender, EventArgs e)
         {
           
             MessageBox.Show("Your item " + Program.ChosenProduct.manufacturer + Program.ChosenProduct.model + "is now being printed" + "\n" + "Please wait");
