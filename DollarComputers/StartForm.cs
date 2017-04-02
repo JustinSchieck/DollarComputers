@@ -33,8 +33,6 @@ namespace DollarComputers
         private void SavedOrderButton_Click(object sender, EventArgs e)
         {
             ProductInfoForm productForm = new ProductInfoForm();
-            //ProductInfoForm.OpenFileDialog();
-            
             productForm.Show();
             this.Hide();
         }

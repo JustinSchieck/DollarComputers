@@ -111,6 +111,7 @@
             // 
             // NextButton
             // 
+            this.NextButton.Enabled = false;
             this.NextButton.Location = new System.Drawing.Point(819, 450);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 40);
@@ -162,8 +163,10 @@
             this.CompDataGridView.Name = "CompDataGridView";
             this.CompDataGridView.ReadOnly = true;
             this.CompDataGridView.RowTemplate.Height = 24;
+            this.CompDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CompDataGridView.Size = new System.Drawing.Size(875, 396);
             this.CompDataGridView.TabIndex = 6;
+            this.CompDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CompDataGridView_CellContentClick);
             // 
             // dollarComputersDataSet
             // 

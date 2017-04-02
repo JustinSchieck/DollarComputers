@@ -8,7 +8,7 @@ namespace DollarComputers
 {
     public static class Program
     {
-       
+        public static product ChosenProduct;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

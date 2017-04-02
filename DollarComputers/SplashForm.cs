@@ -23,7 +23,7 @@ namespace DollarComputers
 
             this.SplashTimer.Enabled = false;
             startForm.Show();
-            this.Hide();
+            Hide();
         }
     }
 }
